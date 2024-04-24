@@ -8,6 +8,14 @@
 			"quoteStyle": "single"
 		}
 	},
+	"formatter": {
+		"ignore": [
+			"./@types/*",
+			"./src/app/*.tsx",
+			"./src/presentation/components/**/*.stories.tsx",
+			"./src/api/generated/**"
+		]
+	},
 	"linter": {
 		"enabled": true,
 		"ignore": [

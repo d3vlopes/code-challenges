@@ -1,0 +1,13 @@
+pre-commit:
+  commands:
+    check:
+      run: npm run check -- --files-ignore-unknown=true {staged_files} && git update-index --again
+    test:
+      run: npm run test related {staged_files}
+
+pre-push:
+  commands:
+    test:
+      run: npm run test:ci
+    packages-audit:
+      run: npm audit
