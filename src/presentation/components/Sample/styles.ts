@@ -7,3 +7,10 @@ export const Heading = styled.h1`
     color: ${theme.colors.primary};
   `}
 `;
+
+export const Highlight = styled.span`
+  ${({ theme }) => css`
+    font-size: 1.8rem;
+    font-family: ${theme.fonts.family.highlight};
+  `}
+`;
