@@ -18,8 +18,8 @@ export const GlobalStyles = createGlobalStyle`
 
   ${({ theme }) => css`
     body {
-      /* color: ${theme.colors}; */
-      /* background: ${theme.colors}; */
+      color: ${theme.colors.grey[100]};
+      background: ${theme.colors.background[400]};
       font: 400 ${theme.fonts.sizes.base} ${theme.fonts.family.body},
         sans-serif;
     }

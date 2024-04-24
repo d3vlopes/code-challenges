@@ -4,7 +4,9 @@ import styled, { css } from 'styled-components';
 
 export const Heading = styled.h1`
   ${({ theme }) => css`
-    color: ${theme.colors.primary};
+    background: ${theme.colors.gradient};
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   `}
 `;
 
