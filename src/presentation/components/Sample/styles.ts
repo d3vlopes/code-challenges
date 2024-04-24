@@ -7,7 +7,7 @@ export const Heading = styled.h1`
     background: ${theme.colors.gradient};
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: ${theme.fonts.sizes['9xl']};
+    font-size: ${theme.fonts.sizes['8xl']};
   `}
 `;
 

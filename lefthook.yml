@@ -3,6 +3,7 @@ pre-commit:
     check:
       run: npm run check -- --files-ignore-unknown=true {staged_files} && git update-index --again
     test:
+      glob: '*.{ts, tsx}'
       run: npm run test
 
 pre-push:
