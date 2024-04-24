@@ -3,8 +3,7 @@ pre-commit:
     check:
       run: npm run check -- --files-ignore-unknown=true {staged_files} && git update-index --again
     test:
-      glob: '*.test'
-      run: npm run test related {staged_files}
+      run: npm run test
 
 pre-push:
   commands:
