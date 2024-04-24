@@ -1,7 +1,13 @@
-export const Test = () => {
+import * as S from './styles';
+
+export interface SampleProps {
+  title?: string;
+}
+
+export const Sample = ({ title }: SampleProps) => {
   return (
     <div>
-      <h1>Hello World</h1>
+      <S.Heading>{title}</S.Heading>
     </div>
   );
 };

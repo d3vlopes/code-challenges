@@ -1,10 +1,12 @@
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 
-import { Test } from '.';
+import { render } from '@/__tests__/helpers';
+
+import { Sample } from '.';
 
 describe('<Sample />', () => {
   it('should ', () => {
-    render(<Test />);
+    render(<Sample title="Hello World" />);
 
     const heading = screen.getByRole('heading', { name: 'Hello World' });
 
