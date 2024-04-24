@@ -12,7 +12,8 @@
 		"test:ci": "npx vitest run --coverage",
 		"test:verbose": "npx vitest",
 		"test:unit": "npx vitest --watch --silent",
-		"storybook": "storybook dev -p 6006"
+		"storybook": "storybook dev -p 6006",
+		"typecheck": "tsc --project tsconfig.json --noEmit"
 	},
 	"dependencies": {
 		"next": "14.2.2",
