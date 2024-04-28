@@ -38,7 +38,8 @@
 			"style": {
 				"useEnumInitializers": "off",
 				"noNonNullAssertion": "off",
-				"useImportType": "off"
+				"useImportType": "off",
+				"useSelfClosingElements": "off"
 			},
 			"complexity": {
 				"noStaticOnlyClass": "off"
