@@ -61,7 +61,7 @@ export const Nav = styled.nav<MenuProps>`
 
       a {
         font-family: ${theme.fonts.family.heading};
-        font-size: ${theme.fonts.sizes.lg};
+        font-size: ${theme.fonts.sizes['2xl']};
         font-weight: 500;
         color: ${theme.colors.text.white};
         text-rendering: optimizeLegibility;
