@@ -92,7 +92,7 @@ export const Heading = styled.div`
       font-weight: 700;
       color: ${theme.colors.text.white};
       text-align: center;
-      max-width: 34.3rem;
+      max-width: 49rem;
 
       ${media.sm`
         font-size: ${theme.fonts.sizes['6xl']};
@@ -100,7 +100,7 @@ export const Heading = styled.div`
 
       ${media.md`
         font-size: ${theme.fonts.sizes['7xl']};
-        max-width: 57.8rem;
+        max-width: 67rem;
       `}
     }
 
@@ -118,11 +118,11 @@ export const Description = styled.p`
     color: ${theme.colors.text.white};
     text-align: center;
     line-height: 150%;
-    max-width: 34.3rem;
+    max-width: 50rem;
 
     ${media.md`
       font-size: ${theme.fonts.sizes['2xl']};
-      max-width: 56.6rem;
+      max-width: 68rem;
     `}
   `}
 `;
