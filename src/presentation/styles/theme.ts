@@ -1,6 +1,6 @@
 export const theme = {
 	colors: {
-		gradient: 'linear-gradient(90deg, #FE6B0C 2.16%, #FE012F 87.97%)',
+		gradient: 'linear-gradient(230deg, #FE6B0C 2.16%, #FE012F 87.97%)',
 		background: {
 			100: '#252221',
 			200: '#1B1919',
