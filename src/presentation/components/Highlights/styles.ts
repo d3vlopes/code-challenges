@@ -23,7 +23,7 @@ export const HighlightWrapper = styled.div`
 
   ${media.md`
     flex-direction: row;
-    justify-content: space-between;
+    gap: 3.6rem;
 
     &:nth-child(even) {
       flex-direction: row-reverse;
