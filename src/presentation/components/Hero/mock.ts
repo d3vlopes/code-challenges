@@ -6,7 +6,7 @@ export const heroMock: HeroProps = {
 	titleHTML:
 		'<h1>Ganhe experiência como desenvolvedor criando <strong>projetos do mundo real</strong></h1>',
 	description:
-		'Com as trilhas do Code Challenges, você ganha a experiência necessária para entrar no mercado como desenvolvedor júnior.',
+		'Com as trilhas do Code Challenges, você ganha a experiência necessária para entrar no mercado preparado para os desafios que vai encontrar.',
 	button: {
 		text: 'Explorar trilhas',
 		href: '#trilhas',

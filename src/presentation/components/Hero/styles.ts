@@ -118,11 +118,11 @@ export const Description = styled.p`
     color: ${theme.colors.text.white};
     text-align: center;
     line-height: 150%;
-    max-width: 50rem;
+    max-width: 33rem;
 
     ${media.md`
       font-size: ${theme.fonts.sizes['2xl']};
-      max-width: 68rem;
+      max-width: 66rem;
     `}
   `}
 `;
