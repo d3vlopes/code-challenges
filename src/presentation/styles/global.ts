@@ -2,6 +2,8 @@
 
 import { createGlobalStyle, css } from 'styled-components';
 
+import { media } from './helpers/media';
+
 export const GlobalStyles = createGlobalStyle`
   * {
     margin: 0;
@@ -59,6 +61,48 @@ export const GlobalStyles = createGlobalStyle`
     ol {
       list-style: none;
       list-style-type: none;
+    }
+
+    .modal-overlay {
+      background: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: ${theme.layers.alwaysOnTop};
+    }
+
+    .modal-content {
+      position: relative;
+      width: 100%;
+      max-width: 104.2rem;
+      min-height: 50rem;
+      background: ${theme.colors.background['300']};
+      border-radius: 4px;
+      margin: 1.6rem;
+      max-height: calc(100vh - 2rem);
+      overflow-y: auto;
+
+      ${media.lg`
+        margin: 0;
+      `}
+    }
+
+    .modal-close {
+      position: absolute;
+      right: 3px;
+      top: 17px;
+      border: 0;
+      background: transparent;
+      transition: filter 0.2s;
+
+      &:hover {
+        filter: brightness(0.8);
+      }
     }
   `}
 `;
