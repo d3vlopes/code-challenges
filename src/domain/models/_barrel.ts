@@ -5,3 +5,4 @@ export * from './Hero';
 export * from './Highlight';
 export * from './Section';
 export * from './Challenge';
+export * from './ChallengeCard';
