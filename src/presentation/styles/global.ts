@@ -79,6 +79,7 @@ export const GlobalStyles = createGlobalStyle`
     .modal-content {
       position: relative;
       width: 100%;
+      min-width: 36rem;
       max-width: 104.2rem;
       min-height: 50rem;
       background: ${theme.colors.background['300']};
@@ -87,18 +88,23 @@ export const GlobalStyles = createGlobalStyle`
       max-height: calc(100vh - 2rem);
       overflow-y: auto;
 
-      ${media.lg`
+      ${media.md`
         margin: 0;
+        height: 70rem;
       `}
     }
 
     .modal-close {
       position: absolute;
-      right: 3px;
+      right: 12px;
       top: 17px;
       border: 0;
       background: transparent;
       transition: filter 0.2s;
+
+      ${media.md`
+        right: 40px;
+      `}
 
       &:hover {
         filter: brightness(0.8);
