@@ -6,3 +6,4 @@ export * from './Highlight';
 export * from './Section';
 export * from './Challenge';
 export * from './ChallengeCard';
+export * from './Track';
