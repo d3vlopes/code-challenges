@@ -33,6 +33,7 @@ export const Wrapper = styled.div<WrapperProps>`
     align-items: center;
     background-color: ${theme.colors.support.red};
     border-radius: 4px;
+    z-index: ${theme.layers.base};
 
     span {
       font-family: ${theme.fonts.family.body};
