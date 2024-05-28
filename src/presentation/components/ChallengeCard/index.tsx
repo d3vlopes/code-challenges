@@ -81,10 +81,10 @@ export const ChallengeCard = ({
 					<iframe
 						data-testid="iframe-video"
 						src={`https://www.youtube.com/embed/${videoID}`}
-						title="YouTube video player"
+						title={title}
+						loading="lazy"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 						referrerPolicy="strict-origin-when-cross-origin"
-						loading="lazy"
 						allowFullScreen
 					/>
 
