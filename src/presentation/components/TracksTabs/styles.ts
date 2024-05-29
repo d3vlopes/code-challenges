@@ -77,13 +77,23 @@ export const ChallengesWrapper = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1.6rem;
-
+  max-height: 100%;
+  overflow-y: auto;
+  padding-bottom: 4rem;
+  
   ${ChallengeCardStyles} {
     width: 33rem;
+    max-width: 40rem;
+  }
+  
+  @media (max-width: 375px) {
+    height: 108.2rem;
   }
 
   ${media.md`
     gap: 3.2rem;
+    height: auto;
+    overflow-y: hidden;
     
     ${ChallengeCardStyles} {
       width: 35.2rem;
