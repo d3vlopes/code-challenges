@@ -1,11 +1,13 @@
 'use client';
 
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 
 import { TrackModel } from '@/domain/models/Track';
 
 import { Badge } from '@/presentation/components/Badge';
 import { ChallengeCard } from '@/presentation/components/ChallengeCard';
+
+import { Container } from '@/presentation/styles/container';
 
 import { generateTabID } from './helpers/generateAccordionID';
 
@@ -61,15 +63,13 @@ export const TracksTab = ({ tracks }: TracksTabProps) => {
 						aria-hidden={tabActive !== track.name}
 						isActive={tabActive === track.name}
 					>
-						<S.ChallengesWrapper>
-							{track.challenges?.map((challenge) => {
-								return (
-									<Fragment key={challenge.id}>
-										<ChallengeCard {...challenge} />
-									</Fragment>
-								);
-							})}
-						</S.ChallengesWrapper>
+						<Container>
+							<S.ChallengesWrapper>
+								{track.challenges?.map((challenge) => {
+									return <ChallengeCard key={challenge.id} {...challenge} />;
+								})}
+							</S.ChallengesWrapper>
+						</Container>
 					</S.TabContent>
 				);
 			})}
