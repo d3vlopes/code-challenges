@@ -7,3 +7,5 @@ export * from './Section';
 export * from './Challenge';
 export * from './ChallengeCard';
 export * from './Track';
+export * from './Icon';
+export * from './Benefit';
