@@ -1,6 +1,7 @@
 import { headerMock } from '@/presentation/components/Header/mock';
 import { heroMock } from '@/presentation/components/Hero/mock';
 import { highlightsMock } from '@/presentation/components/Highlights/mock';
+import { stepsMock } from '@/presentation/components/Steps/mock';
 import { tracksMock } from '@/presentation/components/TracksTabs/mock';
 
 import { MainTemplateProps } from '.';
@@ -23,5 +24,9 @@ export const mainTemplateMock: MainTemplateProps = {
 				href: '#checkout',
 			},
 		},
+	},
+	howItWorks: {
+		heading: 'Como funciona',
+		content: stepsMock.items,
 	},
 };
