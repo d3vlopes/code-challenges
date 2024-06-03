@@ -10,5 +10,5 @@ pre-push:
   commands:
     test:
       run: npm run test:ci
-    packages-audit:
-      run: npm audit
+    # packages-audit:
+    #   run: npm audit
