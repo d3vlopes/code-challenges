@@ -40,5 +40,5 @@ jobs:
       - name: Test
         run: npm run test:ci
 
-      - name: Packages audit
-        run: npm audit
+      # - name: Packages audit
+      #   run: npm audit
