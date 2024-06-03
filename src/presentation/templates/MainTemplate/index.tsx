@@ -4,6 +4,7 @@ import { Header } from '@/presentation/components/Header';
 import { Hero } from '@/presentation/components/Hero';
 
 import { HighlightsSection } from './sections/Highlights';
+import { HowItWorksSection } from './sections/HowItWorks';
 import { TracksSection } from './sections/Tracks';
 
 import * as S from './styles';
@@ -21,6 +22,10 @@ export const MainTemplate = (props: MainTemplateProps) => {
 			</S.Container>
 
 			<TracksSection {...props.tracks} />
+
+			<S.Container>
+				<HowItWorksSection {...props.howItWorks} />
+			</S.Container>
 		</>
 	);
 };

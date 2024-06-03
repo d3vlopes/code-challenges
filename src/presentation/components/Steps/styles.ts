@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   gap: 1.6rem;
   width: 100%;
+  align-items: center;
 `;
 
 export const ItemWrapper = styled.div`
@@ -28,7 +29,7 @@ export const ItemWrapper = styled.div`
       font-family: ${theme.fonts.family.body};
       font-size: ${theme.fonts.sizes.sm};
       color: ${theme.colors.text.white};
-      max-width: 21.8rem;
+      max-width: 70%;
       line-height: 150%;
 
       ${media.md`

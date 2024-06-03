@@ -1,4 +1,4 @@
-import { HighlightModel, SectionModel, TrackModel } from './_barrel';
+import { HighlightModel, SectionModel, StepModel, TrackModel } from './_barrel';
 
 export interface HighlightsSectionModel extends SectionModel {
 	content: HighlightModel[];
@@ -13,4 +13,8 @@ export interface TracksSectionModel extends SectionModel {
 			href: string;
 		};
 	};
+}
+
+export interface HowItWorkSectionModel extends SectionModel {
+	content: StepModel[];
 }
