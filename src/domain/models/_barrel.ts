@@ -9,3 +9,4 @@ export * from './ChallengeCard';
 export * from './Track';
 export * from './Icon';
 export * from './Benefit';
+export * from './Step';
