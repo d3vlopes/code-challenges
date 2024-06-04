@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
   flex-wrap: wrap;
   gap: 1.6rem;
   width: 100%;
+  align-content: center;
 
   ${media.md`
     flex-direction: row;
@@ -30,6 +31,7 @@ export const CardWrapper = styled.div`
     background-color: ${theme.colors.background[300]};
     padding: 2.4rem 0;
     border-radius: 4px;
+    width: 34.3rem;
     
     img {
       margin: 0 auto;
@@ -40,6 +42,10 @@ export const CardWrapper = styled.div`
         box-shadow: 0px 4px 4px 0px rgba(37, 34, 33, 0.4);
         transition: all ${theme.transitions.default};
       }
+    `}
+
+    ${media.xl`
+      width: 40rem;
     `}
   `}
 `;
@@ -68,6 +74,10 @@ export const CardDescriptionWrapper = styled.div`
       line-height: 150%;
       text-align: center;
       max-width: 32.6rem;
+
+      ${media.lg`
+        max-width: 35.6rem;
+      `}
     }
   `}
 `;
@@ -81,6 +91,8 @@ export const FeaturesWrapper = styled.div`
       font-family: ${theme.fonts.family.body};
       font-size: ${theme.fonts.sizes.lg};
       color: ${theme.colors.text.white};
+      margin-left: 0.8rem;
+      max-width: max-content;
     }
   `}
 `;

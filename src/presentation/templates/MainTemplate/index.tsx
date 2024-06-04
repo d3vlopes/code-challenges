@@ -3,6 +3,7 @@ import { MainModel } from '@/domain/models/Main';
 import { Header } from '@/presentation/components/Header';
 import { Hero } from '@/presentation/components/Hero';
 
+import { BenefitsSection } from './sections/Benefits';
 import { HighlightsSection } from './sections/Highlights';
 import { HowItWorksSection } from './sections/HowItWorks';
 import { TracksSection } from './sections/Tracks';
@@ -25,6 +26,7 @@ export const MainTemplate = (props: MainTemplateProps) => {
 
 			<S.Container>
 				<HowItWorksSection {...props.howItWorks} />
+				<BenefitsSection {...props.benefits} />
 			</S.Container>
 		</>
 	);

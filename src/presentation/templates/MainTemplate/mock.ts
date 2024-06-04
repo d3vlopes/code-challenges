@@ -1,3 +1,4 @@
+import { benefitsCardMock } from '@/presentation/components/BenefitsCard/mock';
 import { headerMock } from '@/presentation/components/Header/mock';
 import { heroMock } from '@/presentation/components/Hero/mock';
 import { highlightsMock } from '@/presentation/components/Highlights/mock';
@@ -28,5 +29,10 @@ export const mainTemplateMock: MainTemplateProps = {
 	howItWorks: {
 		heading: 'Como funciona',
 		content: stepsMock.items,
+	},
+	benefits: {
+		id: 'beneficios',
+		heading: 'Benefícios',
+		content: benefitsCardMock.items,
 	},
 };

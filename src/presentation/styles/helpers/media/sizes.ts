@@ -4,5 +4,5 @@ export const sizes: { [key in Breakpoints]: number } = {
 	sm: 375,
 	md: 768,
 	lg: 1024,
-	xl: 1280,
+	xl: 1440,
 };
