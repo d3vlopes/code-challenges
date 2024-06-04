@@ -1,9 +1,5 @@
+import { FeatureModel } from './Feature';
 import { IconModel } from './Icon';
-
-interface FeatureModel {
-	id: string;
-	text: string;
-}
 
 export interface BenefitModel {
 	id: string;
