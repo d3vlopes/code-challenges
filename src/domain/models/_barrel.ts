@@ -10,3 +10,4 @@ export * from './Track';
 export * from './Icon';
 export * from './Benefit';
 export * from './Step';
+export * from './Payment';
