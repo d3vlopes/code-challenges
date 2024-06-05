@@ -4,6 +4,7 @@ import { Header } from '@/presentation/components/Header';
 import { Hero } from '@/presentation/components/Hero';
 
 import { BenefitsSection } from './sections/Benefits';
+import { CheckoutSection } from './sections/Checkout';
 import { HighlightsSection } from './sections/Highlights';
 import { HowItWorksSection } from './sections/HowItWorks';
 import { TracksSection } from './sections/Tracks';
@@ -28,6 +29,8 @@ export const MainTemplate = (props: MainTemplateProps) => {
 				<HowItWorksSection {...props.howItWorks} />
 				<BenefitsSection {...props.benefits} />
 			</S.Container>
+
+			<CheckoutSection {...props.checkout} />
 		</>
 	);
 };

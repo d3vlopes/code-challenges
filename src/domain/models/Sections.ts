@@ -1,6 +1,8 @@
 import {
 	BenefitModel,
+	FeatureModel,
 	HighlightModel,
+	PaymentMethodModel,
 	SectionModel,
 	StepModel,
 	TrackModel,
@@ -27,4 +29,17 @@ export interface HowItWorkSectionModel extends SectionModel {
 
 export interface BenefitsSectionModel extends SectionModel {
 	content: BenefitModel[];
+}
+
+export interface CheckoutSectionModel extends SectionModel {
+	badgeText: string;
+	features: FeatureModel[];
+	originalPrice: string;
+	salePrice: string;
+	button: {
+		text: string;
+		href: string;
+	};
+	warningText?: string;
+	paymentMethods: PaymentMethodModel[];
 }

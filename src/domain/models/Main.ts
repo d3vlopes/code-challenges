@@ -2,6 +2,7 @@ import { HeaderModel, HeroModel } from './_barrel';
 
 import {
 	BenefitsSectionModel,
+	CheckoutSectionModel,
 	HighlightsSectionModel,
 	HowItWorkSectionModel,
 	TracksSectionModel,
@@ -14,4 +15,5 @@ export interface MainModel {
 	tracks: TracksSectionModel;
 	howItWorks: HowItWorkSectionModel;
 	benefits: BenefitsSectionModel;
+	checkout: CheckoutSectionModel;
 }
