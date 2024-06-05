@@ -86,4 +86,11 @@ export const mainTemplateMock: MainTemplateProps = {
 		warningText: 'Preço promocional por tempo limitado!',
 		paymentMethods: paymentMethodsMock.items,
 	},
+	newsletter: {
+		titleHTML:
+			'<h2>Quer ficar por dentro das novidades do <strong>Code Challenges?</strong></h2>',
+		description:
+			'Assine nossa newsletter e fique sabendo quando for disponibilizado novas trilhas, promoções e muito mais!',
+		buttonText: 'Assinar',
+	},
 };

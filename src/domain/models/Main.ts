@@ -5,6 +5,7 @@ import {
 	CheckoutSectionModel,
 	HighlightsSectionModel,
 	HowItWorkSectionModel,
+	NewsletterSectionModel,
 	TracksSectionModel,
 } from './Sections';
 
@@ -16,4 +17,5 @@ export interface MainModel {
 	howItWorks: HowItWorkSectionModel;
 	benefits: BenefitsSectionModel;
 	checkout: CheckoutSectionModel;
+	newsletter: NewsletterSectionModel;
 }
