@@ -16,7 +16,7 @@ export const options: OptionsProps[] = [
 	{
 		id: generateID(),
 		text: 'Full Stack Developer',
-		value: 'full-Stack-developer',
+		value: 'full-stack-developer',
 	},
 	{
 		id: generateID(),
