@@ -22,7 +22,7 @@
 			"./@types/*",
 			"./src/app/*.tsx",
 			"./src/presentation/components/**/*.stories.tsx",
-			"./src/api/generated/**"
+			"./src/infra/api/generated/**"
 		],
 		"rules": {
 			"recommended": true,

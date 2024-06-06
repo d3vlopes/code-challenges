@@ -6,6 +6,7 @@
 		"build": "next build",
 		"build-storybook": "storybook build",
 		"check": "npx @biomejs/biome check --apply --error-on-warnings ./src",
+		"codegen": "graphql-codegen --config codegen.ts",
 		"dev": "next dev",
 		"start": "next start",
 		"test": "npx vitest run --silent",
