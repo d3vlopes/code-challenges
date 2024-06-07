@@ -67,15 +67,18 @@ export const FormWrapper = styled.form`
   gap: 1.6rem;
   margin-top: calc(2.4rem - 1.6rem);
   
-  input, select, button {
+  input, select {
     width: 34.3rem;
 
     ${media.md`
       width: 35.2rem;
     `}
   }
+`;
 
+export const ButtonWrapper = styled.div`
   button {
+    width: 34.3rem;
     height: 6.4rem;
-  } 
+  }
 `;

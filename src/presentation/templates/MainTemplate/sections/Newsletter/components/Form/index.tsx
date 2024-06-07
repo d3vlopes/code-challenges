@@ -1,5 +1,10 @@
 'use client';
 
+import { useState } from 'react';
+import { ToastContainer, ToastOptions, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+
 import { NewsletterSectionModel } from '@/domain/models/Sections';
 
 import { useForm, zodResolver } from '@/infra/libs/forms/react-hook-form';
@@ -11,6 +16,8 @@ import { Select } from '@/presentation/components/Select';
 import { options } from './options';
 
 import { NewsletterFormModel, newsletterFormSchema } from './schema';
+
+import { addOnNewsletter } from './action';
 
 import * as S from '../../styles';
 
@@ -26,13 +33,47 @@ export const Form = ({ buttonText }: FormProps) => {
 		resolver: zodResolver(newsletterFormSchema),
 	});
 
-	function onSubmit(data: NewsletterFormModel) {
-		// biome-ignore lint/suspicious/noConsoleLog: <explanation>
-		console.log(data);
+	const [isLoading, setIsLoading] = useState(false);
+
+	const toastOptions: ToastOptions = {
+		position: 'bottom-center',
+		hideProgressBar: true,
+		autoClose: 5000,
+		theme: 'dark',
+	};
+
+	async function onSubmit(formData: NewsletterFormModel) {
+		setIsLoading(true);
+
+		try {
+			const response = await addOnNewsletter(formData);
+
+			if (response.payload?.error) {
+				const errorMessage = response.payload.error[0].message;
+
+				if (errorMessage.includes('email')) {
+					toast.error('Email já cadastrado', toastOptions);
+
+					return;
+				} else {
+					toast.error('Ocorreu um erro, tente novamente', toastOptions);
+
+					return;
+				}
+			}
+
+			toast.success('Cadastro realizado com sucesso', toastOptions);
+		} catch {
+			toast.error('Ocorreu um erro, tente novamente', toastOptions);
+		} finally {
+			setIsLoading(false);
+		}
 	}
 
 	return (
 		<S.FormWrapper>
+			<ToastContainer />
+
 			<Input
 				label="Nome"
 				placeholder="Nome completo"
@@ -50,13 +91,15 @@ export const Form = ({ buttonText }: FormProps) => {
 
 			<Select label="Trilha" options={options} {...register('track')} />
 
-			<Button
-				type="button"
-				disabled={!isValid}
-				onClick={handleSubmit(onSubmit)}
-			>
-				{buttonText}
-			</Button>
+			<S.ButtonWrapper>
+				<Button
+					type="button"
+					disabled={!isValid || isLoading}
+					onClick={handleSubmit(onSubmit)}
+				>
+					{isLoading ? 'Enviando...' : buttonText}
+				</Button>
+			</S.ButtonWrapper>
 		</S.FormWrapper>
 	);
 };
