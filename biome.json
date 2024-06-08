@@ -22,7 +22,7 @@
 			"./@types/*",
 			"./src/app/*.tsx",
 			"./src/presentation/components/**/*.stories.tsx",
-			"./src/api/generated/**"
+			"./src/infra/api/generated/**"
 		],
 		"rules": {
 			"recommended": true,
@@ -39,7 +39,8 @@
 				"useEnumInitializers": "off",
 				"noNonNullAssertion": "off",
 				"useImportType": "off",
-				"useSelfClosingElements": "off"
+				"useSelfClosingElements": "off",
+				"noUselessElse": "off"
 			},
 			"complexity": {
 				"noStaticOnlyClass": "off"

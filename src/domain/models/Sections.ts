@@ -43,3 +43,9 @@ export interface CheckoutSectionModel extends SectionModel {
 	warningText?: string;
 	paymentMethods: PaymentMethodModel[];
 }
+
+export interface NewsletterSectionModel extends SectionModel {
+	titleHTML: string;
+	description: string;
+	buttonText: string;
+}

@@ -7,6 +7,7 @@ import { BenefitsSection } from './sections/Benefits';
 import { CheckoutSection } from './sections/Checkout';
 import { HighlightsSection } from './sections/Highlights';
 import { HowItWorksSection } from './sections/HowItWorks';
+import { NewsletterSection } from './sections/Newsletter';
 import { TracksSection } from './sections/Tracks';
 
 import * as S from './styles';
@@ -31,6 +32,10 @@ export const MainTemplate = (props: MainTemplateProps) => {
 			</S.Container>
 
 			<CheckoutSection {...props.checkout} />
+
+			<S.Container>
+				<NewsletterSection {...props.newsletter} />
+			</S.Container>
 		</>
 	);
 };
