@@ -85,6 +85,7 @@ export const Button = styled.button<AccordionProps>`
     }
 
     svg {
+      align-self: baseline;
       color: ${theme.colors.support.white};
     }
 
