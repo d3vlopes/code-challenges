@@ -3,6 +3,7 @@ import { HeaderModel, HeroModel } from './_barrel';
 import {
 	BenefitsSectionModel,
 	CheckoutSectionModel,
+	FaqSectionModel,
 	HighlightsSectionModel,
 	HowItWorkSectionModel,
 	NewsletterSectionModel,
@@ -18,4 +19,5 @@ export interface MainModel {
 	benefits: BenefitsSectionModel;
 	checkout: CheckoutSectionModel;
 	newsletter: NewsletterSectionModel;
+	faq: FaqSectionModel;
 }

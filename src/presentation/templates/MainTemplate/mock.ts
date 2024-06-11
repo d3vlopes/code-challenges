@@ -1,14 +1,15 @@
 import { benefitsCardMock } from '@/presentation/components/BenefitsCard/mock';
+import { faqAccordionMock } from '@/presentation/components/FaqAccordion/mock';
 import { headerMock } from '@/presentation/components/Header/mock';
 import { heroMock } from '@/presentation/components/Hero/mock';
 import { highlightsMock } from '@/presentation/components/Highlights/mock';
+import { paymentMethodsMock } from '@/presentation/components/PaymentMethods/mock';
 import { stepsMock } from '@/presentation/components/Steps/mock';
 import { tracksMock } from '@/presentation/components/TracksTabs/mock';
 
 import { formatPrice } from '@/utils/format-price';
 import { generateID } from '@/utils/generate-id';
 
-import { paymentMethodsMock } from '@/presentation/components/PaymentMethods/mock';
 import { MainTemplateProps } from '.';
 
 export const mainTemplateMock: MainTemplateProps = {
@@ -92,5 +93,10 @@ export const mainTemplateMock: MainTemplateProps = {
 		description:
 			'Assine nossa newsletter e fique sabendo quando for disponibilizado novas trilhas, promoções e muito mais!',
 		buttonText: 'Assinar',
+	},
+	faq: {
+		id: 'duvidas',
+		heading: 'Perguntas frequentes',
+		content: faqAccordionMock.items,
 	},
 };
