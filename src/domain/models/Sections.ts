@@ -3,6 +3,7 @@ import {
 	FeatureModel,
 	HighlightModel,
 	PaymentMethodModel,
+	QuestionModel,
 	SectionModel,
 	StepModel,
 	TrackModel,
@@ -48,4 +49,8 @@ export interface NewsletterSectionModel extends SectionModel {
 	titleHTML: string;
 	description: string;
 	buttonText: string;
+}
+
+export interface FaqSectionModel extends SectionModel {
+	content: QuestionModel[];
 }
