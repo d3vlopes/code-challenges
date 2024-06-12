@@ -8,6 +8,7 @@ export const Wrapper = styled.section`
   ${({ theme }) => css`
   margin-top: 8rem;
   padding-top: 8rem;
+  padding-bottom: 8rem;
   background-color: ${theme.colors.background[300]};
   border-top: 1px solid ${theme.colors.background[100]};
   border-bottom: 1px solid ${theme.colors.background[100]};
@@ -15,6 +16,7 @@ export const Wrapper = styled.section`
   ${media.md`
     margin-top: 12rem;
     padding-top: 12rem;
+    padding-bottom: 12rem;
   `}
   `}
 `;
