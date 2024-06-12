@@ -15,8 +15,8 @@ export const headerMock: HeaderProps = {
 		},
 		{
 			id: generateID(),
-			href: '#bonus',
-			text: 'Bônus',
+			href: '#beneficios',
+			text: 'Benefícios',
 		},
 		{
 			id: generateID(),
