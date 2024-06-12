@@ -32,6 +32,7 @@ export const mainTemplateMock: MainTemplateProps = {
 		},
 	},
 	howItWorks: {
+		id: 'como-funciona',
 		heading: 'Como funciona',
 		content: stepsMock.items,
 	},
