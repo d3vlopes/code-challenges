@@ -1,5 +1,6 @@
 import { benefitsCardMock } from '@/presentation/components/BenefitsCard/mock';
 import { faqAccordionMock } from '@/presentation/components/FaqAccordion/mock';
+import { footerMock } from '@/presentation/components/Footer/mock';
 import { headerMock } from '@/presentation/components/Header/mock';
 import { heroMock } from '@/presentation/components/Hero/mock';
 import { highlightsMock } from '@/presentation/components/Highlights/mock';
@@ -100,4 +101,5 @@ export const mainTemplateMock: MainTemplateProps = {
 		heading: 'Perguntas frequentes',
 		content: faqAccordionMock.items,
 	},
+	footer: footerMock,
 };
