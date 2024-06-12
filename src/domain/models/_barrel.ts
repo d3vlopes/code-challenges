@@ -13,3 +13,4 @@ export * from './Step';
 export * from './Payment';
 export * from './Feature';
 export * from './Question';
+export * from './Footer';
