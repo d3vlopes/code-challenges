@@ -3,6 +3,7 @@ import { generateID } from '@/utils/generate-id';
 import { TracksTabProps } from '.';
 
 import { challengeMock } from '../ChallengeCard/mock';
+import { headerMock } from '../Header/mock';
 
 export const tracksMock: TracksTabProps = {
 	tracks: [
@@ -10,6 +11,7 @@ export const tracksMock: TracksTabProps = {
 			id: generateID(),
 			isReleased: true,
 			name: 'Frontend Developer',
+			href: headerMock.navigationLinks[0].href,
 			challenges: [
 				{
 					id: generateID(),
@@ -29,7 +31,7 @@ export const tracksMock: TracksTabProps = {
 		},
 		{
 			id: generateID(),
-			isReleased: true,
+			isReleased: false,
 			name: 'Backend Developer',
 			challenges: [
 				{

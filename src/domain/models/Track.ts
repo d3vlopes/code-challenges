@@ -9,4 +9,5 @@ export interface TrackModel {
 	name: string;
 	isReleased: boolean;
 	challenges?: ChallengeType[];
+	href?: string;
 }
