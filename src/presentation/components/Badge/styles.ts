@@ -7,12 +7,12 @@ import { BadgeProps } from '.';
 type WrapperProps = Pick<BadgeProps, 'size'>;
 
 const wrapperModifiers = {
-	small: (theme: DefaultTheme) => css`
+	small: () => css`
     width: 6.2rem;
     height: 2rem;
 
     span {
-      font-size: ${theme.fonts.sizes.xs};
+      font-size: 1.1rem;
     }
   `,
 
