@@ -1,5 +1,6 @@
 import { MainModel } from '@/domain/models/Main';
 
+import { Footer } from '@/presentation/components/Footer';
 import { Header } from '@/presentation/components/Header';
 import { Hero } from '@/presentation/components/Hero';
 
@@ -39,6 +40,8 @@ export const MainTemplate = (props: MainTemplateProps) => {
 			</S.Container>
 
 			<FaqSection {...props.faq} />
+
+			<Footer {...props.footer} />
 		</>
 	);
 };

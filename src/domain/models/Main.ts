@@ -1,4 +1,4 @@
-import { HeaderModel, HeroModel } from './_barrel';
+import { FooterModel, HeaderModel, HeroModel } from './_barrel';
 
 import {
 	BenefitsSectionModel,
@@ -20,4 +20,5 @@ export interface MainModel {
 	checkout: CheckoutSectionModel;
 	newsletter: NewsletterSectionModel;
 	faq: FaqSectionModel;
+	footer: FooterModel;
 }
