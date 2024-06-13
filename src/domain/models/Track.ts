@@ -1,6 +1,6 @@
-import { ChallengeCardModel } from './ChallengeCard';
+import { ChallengeModel } from './Challenge';
 
-interface ChallengeType extends ChallengeCardModel {
+interface ChallengeType extends ChallengeModel {
 	id: string;
 }
 
