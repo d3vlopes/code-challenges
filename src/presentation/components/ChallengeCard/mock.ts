@@ -39,10 +39,10 @@ export const challengeMock: ChallengeCardProps = {
 		},
 		{
 			id: generateID(),
-			name: 'React Query',
+			name: 'React Router',
 			icon: {
-				src: 'https://sa-east-1.graphassets.com/clvfs1ld70bcs07ke07bkdxol/clwfjkfwm09w307lo9vg01928',
-				alt: 'Logo do React Query',
+				src: 'https://sa-east-1.graphassets.com/clvfs1ld70bcs07ke07bkdxol/clwfjkgoy0aai08luo4oue6x6',
+				alt: 'Logo do React Router',
 			},
 		},
 		{
