@@ -76,6 +76,11 @@ export const TechnologiesTopIcon = styled(TechnologiesWrapper)`
       top: -41px;
     }
 
+    &:nth-child(2) {
+      position: relative;
+      top: -15px;
+    }
+
     &:nth-child(3) {
       position: relative;
       top: -30px;
