@@ -72,10 +72,4 @@ export const challengeMock: ChallengeCardProps = {
 	],
 	description:
 		'Nesse desafio você deve construir uma aplicação que permita que os usuários possam encontrar novas pessoas, utilizando ferramentas modernas e boas práticas para criar um código de alta qualidade e escalabilidade.',
-	buttonText: 'Visualizar detalhes',
-	videoID: 'K4TOrB7at0Y',
-	buttonModal: {
-		text: 'Começar desafio',
-		href: 'https://pay.hotmart.com/C92887324Y?checkoutMode=10',
-	},
 };
