@@ -2,6 +2,8 @@
 
 import styled, { css } from 'styled-components';
 
+import { motion } from '@/infra/libs/animations/framer-motion';
+
 import { media } from '@/presentation/styles/helpers/media';
 
 export const Wrapper = styled.section`
@@ -42,7 +44,7 @@ export const Badge = styled.div`
   `}
 `;
 
-export const Heading = styled.h2`
+export const Heading = styled(motion.h2)`
   ${({ theme }) => css`
     font-size: ${theme.fonts.sizes['7xl']};
     font-family: ${theme.fonts.family.heading};
@@ -81,7 +83,7 @@ export const FeaturesItemWrapper = styled.div`
   align-items: start;
 `;
 
-export const FeatureItem = styled.div`
+export const FeatureItem = styled(motion.div)`
   ${({ theme }) => css`
     display: flex;
     align-items: center;
