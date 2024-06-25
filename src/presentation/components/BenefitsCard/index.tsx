@@ -1,6 +1,10 @@
+'use client';
+
 import Image from 'next/image';
 
 import { BenefitModel } from '@/domain/models/Benefit';
+
+import { useAnimation } from '@/presentation/hooks/useAnimation';
 
 import * as S from './styles';
 
@@ -9,11 +13,33 @@ export interface BenefitsCardProps {
 }
 
 export const BenefitsCard = ({ items }: BenefitsCardProps) => {
+	const { ref, inView } = useAnimation();
+
+	const animationVariants = {
+		hidden: { opacity: 0, x: 10 },
+		visible: { opacity: 1, x: 0 },
+	};
+
 	return (
 		<S.Wrapper>
-			{items.map((item) => {
+			{items.map((item, index) => {
+				const animationDelay = (index + 1) * 0.5;
+
 				return (
-					<S.CardWrapper key={item.id}>
+					<S.CardWrapper
+						key={item.id}
+						ref={ref}
+						initial="hidden"
+						whileInView="visible"
+						animate={inView ? 'visible' : 'hidden'}
+						variants={animationVariants}
+						viewport={{ once: true, amount: 'all' }}
+						transition={{
+							duration: 0.5,
+							delay: animationDelay,
+							type: 'tween',
+						}}
+					>
 						<Image
 							src={item.icon.src}
 							alt={item.icon.alt}
