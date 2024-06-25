@@ -2,6 +2,8 @@
 
 import styled, { css } from 'styled-components';
 
+import { motion } from '@/infra/libs/animations/framer-motion';
+
 import { media } from '@/presentation/styles/helpers/media';
 
 export const Wrapper = styled.div`
@@ -12,7 +14,7 @@ export const Wrapper = styled.div`
   align-items: center;
 `;
 
-export const ItemWrapper = styled.div`
+export const ItemWrapper = styled(motion.div)`
   ${({ theme }) => css`
     display: flex;
     gap: 2.6rem;
@@ -24,14 +26,18 @@ export const ItemWrapper = styled.div`
     border-radius: 4px;
     max-width: 51rem;
     width: 100%;
+  `}
+`;
 
+export const TextWrapper = styled(motion.div)`
+  ${({ theme }) => css`
     p {
       font-family: ${theme.fonts.family.body};
       font-size: ${theme.fonts.sizes.sm};
       color: ${theme.colors.text.white};
       max-width: 70%;
       line-height: 150%;
-
+  
       ${media.md`
         font-size: ${theme.fonts.sizes.base};
         max-width: 36.9rem;
