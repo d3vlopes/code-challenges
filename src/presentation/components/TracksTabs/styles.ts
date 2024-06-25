@@ -93,7 +93,7 @@ export const ChallengesWrapper = styled.div`
   ${media.md`
     gap: 3.2rem;
     height: auto;
-    overflow-y: hidden;
+    overflow: hidden;
     
     ${ChallengeCardStyles} {
       width: 35.2rem;

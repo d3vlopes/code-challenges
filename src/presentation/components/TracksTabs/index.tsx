@@ -65,8 +65,16 @@ export const TracksTab = ({ tracks }: TracksTabProps) => {
 					>
 						<Container>
 							<S.ChallengesWrapper>
-								{track.challenges?.map((challenge) => {
-									return <ChallengeCard key={challenge.id} {...challenge} />;
+								{track.challenges?.map((challenge, index) => {
+									const animationDelayValue = (index + 1) * 0.5;
+
+									return (
+										<ChallengeCard
+											key={challenge.id}
+											animationDelay={animationDelayValue}
+											{...challenge}
+										/>
+									);
 								})}
 							</S.ChallengesWrapper>
 						</Container>
