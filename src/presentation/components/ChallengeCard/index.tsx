@@ -32,7 +32,7 @@ export const ChallengeCard = ({
 			whileInView="visible"
 			animate={inView ? 'visible' : 'hidden'}
 			variants={animationVariants}
-			viewport={{ once: true, amount: 'all' }}
+			viewport={{ once: true, amount: 'some' }}
 			transition={{
 				duration: 0.5,
 				delay: animationDelay,
