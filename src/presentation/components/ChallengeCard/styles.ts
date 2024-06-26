@@ -4,9 +4,11 @@ import styled, { css } from 'styled-components';
 
 import { Wrapper as ButtonStyles } from '@/presentation/components/Button/styles';
 
+import { motion } from '@/infra/libs/animations/framer-motion';
+
 import { media } from '@/presentation/styles/helpers/media';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(motion.div)`
   ${({ theme }) => css`
     border-radius: 0 0 4px 4px;
     background-color: ${theme.colors.background['200']};
@@ -55,7 +57,7 @@ export const TechnologyWrapper = styled.div`
     gap: 1.4rem;
 
     h4 {
-      font-family: ${theme.fonts.family.heading};
+      font-family: ${theme.fonts.family.body};
       font-size: ${theme.fonts.sizes.sm};
       font-weight: 700;
       color: ${theme.colors.text.white};

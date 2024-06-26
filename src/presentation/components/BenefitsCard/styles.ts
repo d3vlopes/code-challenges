@@ -2,6 +2,8 @@
 
 import styled, { css } from 'styled-components';
 
+import { motion } from '@/infra/libs/animations/framer-motion';
+
 import { media } from '@/presentation/styles/helpers/media';
 
 export const Wrapper = styled.div`
@@ -23,7 +25,7 @@ export const Wrapper = styled.div`
   `}
 `;
 
-export const CardWrapper = styled.div`
+export const CardWrapper = styled(motion.div)`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;
