@@ -19,7 +19,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 			<S.Wrapper>
 				<S.Label htmlFor={id}>{label}</S.Label>
 
-				<S.Input id={id} ref={ref} {...props} />
+				<S.Input id={id} ref={ref} isError={!!error} {...props} />
 
 				{!!error && <S.MessageError>{error}</S.MessageError>}
 			</S.Wrapper>
