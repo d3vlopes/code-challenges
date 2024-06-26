@@ -35,7 +35,7 @@ export const TextWrapper = styled(motion.div)`
       font-family: ${theme.fonts.family.body};
       font-size: ${theme.fonts.sizes.sm};
       color: ${theme.colors.text.white};
-      max-width: 70%;
+      max-width: 80%;
       line-height: 150%;
   
       ${media.md`
@@ -51,7 +51,7 @@ export const StepNumber = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 6rem;
+    min-width: 6rem;
     height: 6rem;
     border-radius: 50%;
     background-color: ${theme.colors.background[100]};
