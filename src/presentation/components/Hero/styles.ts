@@ -94,8 +94,9 @@ export const Heading = styled.div`
 
     h1 {
       font-size: ${theme.fonts.sizes['5xl']};
-      font-weight: 700;
+      font-family: ${theme.fonts.family.highlight};
       color: ${theme.colors.text.white};
+      font-weight: 700;
       text-align: center;
       max-width: 49rem;
 
