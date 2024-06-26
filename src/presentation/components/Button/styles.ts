@@ -9,8 +9,8 @@ ${({ theme }) => css`
     justify-content: center;
     align-items: center;
     font-size: ${theme.fonts.sizes.lg};
+    font-family: ${theme.fonts.family.body};
     font-weight: 700;
-    font-family: ${theme.fonts.family.heading};
     color: ${theme.colors.text.white};
     background: ${theme.colors.gradient};
     min-height: 5.3rem;
