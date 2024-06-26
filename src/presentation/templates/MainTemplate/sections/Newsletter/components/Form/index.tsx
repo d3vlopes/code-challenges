@@ -89,7 +89,11 @@ export const Form = ({ buttonText }: FormProps) => {
 				{...register('email')}
 			/>
 
-			<Select label="Trilha" options={options} {...register('track')} />
+			<Select
+				label="Qual trilha você mais tem interesse?"
+				options={options}
+				{...register('track')}
+			/>
 
 			<S.ButtonWrapper>
 				<Button
