@@ -5,9 +5,9 @@ interface JsonLdProps {
 }
 
 export const seoConfig = {
-	title: 'Code Challenges - Experiência definitiva para desenvolvedores',
+	title: 'Code Challenges - Experiência real para desenvolvedores',
 	description:
-		'O Code Challenges é um ambiente inovador, projetado para fornecer experiência real aos desenvolvedores através de desafios baseados em testes técnicos reais enfrentados em empresas. O objetivo é oferecer uma experiência prática e imersiva, permitindo aos desenvolvedores aprimorar suas habilidades em um contexto que simula desafios do mundo real.',
+		'O Code Challenges é um ambiente projetado para fornecer experiência real aos desenvolvedores através de desafios baseados em testes técnicos reais enfrentados em empresas. O objetivo é oferecer uma experiência prática e imersiva, permitindo aos desenvolvedores aprimorar suas habilidades em um contexto que simula desafios do mundo real.',
 	url: 'https://www.codechallenges.com.br',
 	alternateName: 'Code Challenges',
 };
