@@ -30,10 +30,15 @@ export const Container = styled(ContainerBase)`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  margin-right: 0;
+  margin-left: 0;
 
-  ${media.lg`
+  ${media.md`
     margin: 0 auto;
     gap: 8rem;
+    flex-wrap: initial;
+    margin-right: auto;
+    margin-left: auto;
   `}
 `;
 
