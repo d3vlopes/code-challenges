@@ -43,6 +43,10 @@ export interface CheckoutSectionModel extends SectionModel {
 	};
 	warningText?: string;
 	paymentMethods: PaymentMethodModel[];
+	planHighlight: {
+		heading: string;
+		text: string;
+	};
 }
 
 export interface NewsletterSectionModel extends SectionModel {

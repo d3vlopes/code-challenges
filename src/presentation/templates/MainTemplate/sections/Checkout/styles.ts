@@ -14,7 +14,7 @@ export const Wrapper = styled.section`
     margin-top: 8rem;
     border-top: 2px solid ${theme.colors.background[100]};
     border-bottom: 2px solid ${theme.colors.background[100]};
-    padding: 3.2rem 1.6rem;
+    padding-top: 3.2rem;
     background: ${theme.colors.background[300]};
 
     ${media.md`
@@ -181,6 +181,46 @@ export const PaymentMethodsWrapper = styled.div`
       font-family: ${theme.fonts.family.body};
       color: ${theme.colors.grey[100]};
       font-weight: 500;
+    }
+  `}
+`;
+
+export const PlanHighlight = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: ${theme.colors.background[500]};
+    padding: 6rem 1.6rem;
+    width: 100%;
+    margin-top: 4rem;
+
+    h3 {
+      font-size: ${theme.fonts.sizes['6xl']};
+      font-family: ${theme.fonts.family.heading};
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      background: linear-gradient(230deg, #FE6B0C 2.16%, #FE012F 87.97%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      ${media.md`
+        font-size: ${theme.fonts.sizes['8xl']};
+      `}
+    }
+
+    p {
+      font-size: ${theme.fonts.sizes.xl};
+      font-family: ${theme.fonts.family.body};
+      text-align: center;
+      margin-top: 1.6rem;
+      color: ${theme.colors.grey['200']};
+      max-width: 57.1rem;
+
+      ${media.md`
+        font-size: ${theme.fonts.sizes['2xl']};
+      `}
     }
   `}
 `;

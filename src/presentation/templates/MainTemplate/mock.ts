@@ -88,6 +88,10 @@ export const mainTemplateMock: MainTemplateProps = {
 		},
 		warningText: 'Preço promocional por tempo limitado!',
 		paymentMethods: paymentMethodsMock.items,
+		planHighlight: {
+			heading: 'Cancele quando quiser',
+			text: 'Com o plano mensal do Code Challenges, você não é obrigado a ficar pagando por 12 meses algo que não trás resultados de verdade para a sua carreira e tem a flexibilidade para cancelar a qualquer momento!',
+		},
 	},
 	newsletter: {
 		titleHTML:
