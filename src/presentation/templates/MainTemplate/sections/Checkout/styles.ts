@@ -161,10 +161,10 @@ export const ButtonWrapper = styled.div`
     
 
     span {
-      font-size: ${theme.fonts.sizes.base};
+      font-size: ${theme.fonts.sizes.lg};
       font-family: ${theme.fonts.family.body};
-      color: ${theme.colors.support.red};
-      font-weight: 500;
+      color: ${theme.colors.support.green};
+      font-weight: 700;
     }
   `}
 `;

@@ -23,7 +23,6 @@ export const CheckoutSection = (props: CheckoutSectionModel) => {
 		visible: { opacity: 1, x: 0 },
 	};
 
-	const warningAnimation = makeAnimation.flashAnimation();
 	const badgeAnimation = makeAnimation.moveAnimation(20);
 	const headingAnimation = makeAnimation.moveAnimation(40);
 
@@ -82,9 +81,7 @@ export const CheckoutSection = (props: CheckoutSectionModel) => {
 					<a href={props.button.href}>{props.button.text}</a>
 				</Button>
 
-				{!!props.warningText && (
-					<motion.span {...warningAnimation}>{props.warningText}</motion.span>
-				)}
+				{!!props.warningText && <motion.span>{props.warningText}</motion.span>}
 			</S.ButtonWrapper>
 
 			<S.PaymentMethodsWrapper>
