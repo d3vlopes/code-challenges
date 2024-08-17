@@ -16,7 +16,7 @@ export const socialIconsMock: SocialIconsProps = {
 			name: 'Github',
 			src: 'https://sa-east-1.graphassets.com/clvfs1ld70bcs07ke07bkdxol/clvfvldj20sm608lqrmcvr8i1',
 			alt: 'Logo do Github',
-			href: 'https://github.com/Code-Challenges-Brasil',
+			href: 'https://github.com/code-challenges-org',
 		},
 		{
 			id: generateID(),
