@@ -216,7 +216,8 @@ export const PlanHighlight = styled.div`
       text-align: center;
       margin-top: 1.6rem;
       color: ${theme.colors.grey['200']};
-      max-width: 57.1rem;
+      max-width: 112rem;
+      line-height: 150%;
 
       ${media.md`
         font-size: ${theme.fonts.sizes['2xl']};
