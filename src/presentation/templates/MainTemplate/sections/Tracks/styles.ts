@@ -68,7 +68,7 @@ export const CTAText = styled.div`
     font-size: ${theme.fonts.sizes.lg};
     font-family: ${theme.fonts.family.body};
     text-align: center;
-    max-width: 33.2rem;
+    max-width: 20rem;
     margin: 0 auto;
 
     p {
@@ -82,7 +82,8 @@ export const CTAText = styled.div`
     }
 
     ${media.md`
-      font-size: ${theme.fonts.sizes.xl};
+      font-size: ${theme.fonts.sizes['2xl']};
+      max-width: 24rem;
     `}
   `}
 `;
