@@ -69,7 +69,9 @@ export const CheckoutSection = (props: CheckoutSectionModel) => {
 			</S.FeaturesItemWrapper>
 
 			<S.PriceWrapper>
-				<S.OriginalPrice>De {props.originalPrice}</S.OriginalPrice>
+				<S.OriginalPrice>
+					De <strong>{props.originalPrice}</strong>
+				</S.OriginalPrice>
 
 				<S.SalePrice>
 					Por <strong>{props.salePrice}</strong>/mês
