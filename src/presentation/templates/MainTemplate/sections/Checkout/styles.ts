@@ -126,7 +126,7 @@ export const SalePrice = styled.span`
   ${({ theme }) => css`
     font-family: ${theme.fonts.family.body};
     font-size: ${theme.fonts.sizes['6xl']};
-    color: ${theme.colors.support.green};
+    color: ${theme.colors.support.green['400']};
     
     strong {
       font-size: 3.8rem;

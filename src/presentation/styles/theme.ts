@@ -11,7 +11,10 @@ export const theme = {
 		support: {
 			white: '#FFF6F3',
 			red: '#D31A3B',
-			green: '#148A4A',
+			green: {
+				400: '#148A4A',
+				500: '#167040',
+			},
 		},
 		grey: {
 			100: '#D9D9D9',
