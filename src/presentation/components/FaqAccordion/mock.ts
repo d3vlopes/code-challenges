@@ -18,6 +18,12 @@ export const faqAccordionMock: FaqAccordionProps = {
 		},
 		{
 			id: generateID(),
+			title: 'E se eu perceber que não era pra mim?',
+			content:
+				'Você tem 7 dias para experimentar nossa metologia de aprendizado e se decidir que não é pra você, basta pedir o reembolso na plataforma da Hotmart.',
+		},
+		{
+			id: generateID(),
 			title: 'Os desafios tem prazos de entrega?',
 			content:
 				'Não, mas recomendamos você mesmo estimar um prazo e iremos te mostrar como fazer isso de forma profissional, simulando o processo que acontece nas empresas.',

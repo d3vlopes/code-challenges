@@ -15,17 +15,7 @@ import { makeAnimation } from './animations';
 
 import * as S from './styles';
 
-export const CheckoutSection = ({
-	id,
-	badgeText,
-	heading,
-	features,
-	originalPrice,
-	salePrice,
-	button,
-	warningText,
-	paymentMethods,
-}: CheckoutSectionModel) => {
+export const CheckoutSection = (props: CheckoutSectionModel) => {
 	const { ref, inView } = useAnimation();
 
 	const animationVariants = {
@@ -33,22 +23,21 @@ export const CheckoutSection = ({
 		visible: { opacity: 1, x: 0 },
 	};
 
-	const warningAnimation = makeAnimation.flashAnimation();
 	const badgeAnimation = makeAnimation.moveAnimation(20);
 	const headingAnimation = makeAnimation.moveAnimation(40);
 
 	return (
-		<S.Wrapper id={id}>
+		<S.Wrapper id={props.id}>
 			<motion.div {...badgeAnimation}>
 				<S.Badge>
-					<span>{badgeText}</span>
+					<span>{props.badgeText}</span>
 				</S.Badge>
 			</motion.div>
 
-			<S.Heading {...headingAnimation}>{heading}</S.Heading>
+			<S.Heading {...headingAnimation}>{props.heading}</S.Heading>
 
 			<S.FeaturesItemWrapper>
-				{features.map((feature, index) => {
+				{props.features.map((feature, index) => {
 					const animationDelay = (index + 1) * 0.8;
 
 					return (
@@ -80,28 +69,33 @@ export const CheckoutSection = ({
 			</S.FeaturesItemWrapper>
 
 			<S.PriceWrapper>
-				<S.OriginalPrice>De {originalPrice}</S.OriginalPrice>
+				<S.OriginalPrice>
+					De <strong>{props.originalPrice}</strong>
+				</S.OriginalPrice>
 
 				<S.SalePrice>
-					Por <strong>{salePrice}</strong>/mês
+					Por <strong>{props.salePrice}</strong>/mês
 				</S.SalePrice>
 			</S.PriceWrapper>
 
 			<S.ButtonWrapper>
 				<Button asChild>
-					<a href={button.href}>{button.text}</a>
+					<a href={props.button.href}>{props.button.text}</a>
 				</Button>
 
-				{!!warningText && (
-					<motion.span {...warningAnimation}>{warningText}</motion.span>
-				)}
+				{!!props.warningText && <motion.span>{props.warningText}</motion.span>}
 			</S.ButtonWrapper>
 
 			<S.PaymentMethodsWrapper>
 				<span>Formas de pagamento</span>
 
-				<PaymentMethods items={paymentMethods} />
+				<PaymentMethods items={props.paymentMethods} />
 			</S.PaymentMethodsWrapper>
+
+			<S.PlanHighlight>
+				<h3>{props.planHighlight.heading}</h3>
+				<p>{props.planHighlight.text}</p>
+			</S.PlanHighlight>
 		</S.Wrapper>
 	);
 };

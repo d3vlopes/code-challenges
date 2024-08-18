@@ -13,8 +13,7 @@ export const Wrapper = styled.section`
     align-items: center;
     margin-top: 8rem;
     border-top: 2px solid ${theme.colors.background[100]};
-    border-bottom: 2px solid ${theme.colors.background[100]};
-    padding: 3.2rem 1.6rem;
+    padding-top: 3.2rem;
     background: ${theme.colors.background[300]};
 
     ${media.md`
@@ -108,13 +107,17 @@ export const PriceWrapper = styled.div`
   margin-bottom: 2.4rem;
 `;
 
-export const OriginalPrice = styled.strong`
+export const OriginalPrice = styled.span`
   ${({ theme }) => css`
     font-family: ${theme.fonts.family.body};
     font-size: ${theme.fonts.sizes['6xl']};
-    font-weight: 700;
     color: ${theme.colors.support.red};
-    text-decoration: line-through;
+    
+    strong {
+      font-weight: 700;
+      text-decoration: line-through;
+
+    }
 
     ${media.md`
       font-size: ${theme.fonts.sizes['8xl']};
@@ -126,7 +129,7 @@ export const SalePrice = styled.span`
   ${({ theme }) => css`
     font-family: ${theme.fonts.family.body};
     font-size: ${theme.fonts.sizes['6xl']};
-    color: ${theme.colors.support.green};
+    color: ${theme.colors.support.green['400']};
     
     strong {
       font-size: 3.8rem;
@@ -161,10 +164,10 @@ export const ButtonWrapper = styled.div`
     
 
     span {
-      font-size: ${theme.fonts.sizes.base};
+      font-size: ${theme.fonts.sizes.lg};
       font-family: ${theme.fonts.family.body};
       color: ${theme.colors.support.red};
-      font-weight: 500;
+      font-weight: 700;
     }
   `}
 `;
@@ -181,6 +184,45 @@ export const PaymentMethodsWrapper = styled.div`
       font-family: ${theme.fonts.family.body};
       color: ${theme.colors.grey[100]};
       font-weight: 500;
+    }
+  `}
+`;
+
+export const PlanHighlight = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: ${theme.colors.support.green['500']};
+    padding: 6rem 1.6rem;
+    width: 100%;
+    margin-top: 4rem;
+
+    h3 {
+      font-size: ${theme.fonts.sizes['6xl']};
+      font-family: ${theme.fonts.family.heading};
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      color: #fff;
+
+      ${media.md`
+        font-size: ${theme.fonts.sizes['8xl']};
+      `}
+    }
+
+    p {
+      font-size: ${theme.fonts.sizes.xl};
+      font-family: ${theme.fonts.family.body};
+      text-align: center;
+      margin-top: 1.6rem;
+      color: ${theme.colors.text.white};
+      max-width: 112rem;
+      line-height: 150%;
+
+      ${media.md`
+        font-size: ${theme.fonts.sizes['2xl']};
+      `}
     }
   `}
 `;

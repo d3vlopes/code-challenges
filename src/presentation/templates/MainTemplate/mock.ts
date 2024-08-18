@@ -25,9 +25,9 @@ export const mainTemplateMock: MainTemplateProps = {
 		content: tracksMock.tracks,
 		cta: {
 			textHTML:
-				'<p>Assinando hoje você recebe um <strong>super desconto.</strong></p>',
+				'<p>Assine hoje por menos de <strong>R$1,80</strong> por dia</p>',
 			button: {
-				text: 'Quero assinar com desconto',
+				text: 'Quero assinar agora',
 				href: '#checkout',
 			},
 		},
@@ -86,8 +86,12 @@ export const mainTemplateMock: MainTemplateProps = {
 			text: 'Assinar agora',
 			href: 'https://pay.hotmart.com/C92887324Y?checkoutMode=10',
 		},
-		warningText: 'Preço promocional por tempo limitado!',
+		warningText: 'Garantia de 7 dias para experimentar',
 		paymentMethods: paymentMethodsMock.items,
+		planHighlight: {
+			heading: 'Cancele quando quiser',
+			text: 'No Code Challenges, você tem liberdade para decidir quando encerrar sua assinatura. Com o nosso plano mensal, você não fica preso por 12 meses, aqui você só continua se realmente sentir que está evoluindo e atingindo seus objetivos como desenvolvedor.',
+		},
 	},
 	newsletter: {
 		titleHTML:
