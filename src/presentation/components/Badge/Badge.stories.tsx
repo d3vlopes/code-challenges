@@ -8,6 +8,7 @@ const meta: Meta<typeof Badge> = {
 	args: {
 		children: 'Em breve',
 		size: 'medium',
+		color: 'red',
 	},
 };
 
@@ -30,5 +31,28 @@ export const Small: Story = {
 	...template,
 	args: {
 		size: 'small',
+	},
+};
+
+export const Medium: Story = {
+	...template,
+	args: {
+		size: 'medium',
+	},
+};
+
+export const Red: Story = {
+	...template,
+	args: {
+		size: 'small',
+		color: 'red',
+	},
+};
+
+export const Green: Story = {
+	...template,
+	args: {
+		size: 'small',
+		color: 'green',
 	},
 };

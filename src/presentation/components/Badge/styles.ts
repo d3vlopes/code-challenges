@@ -4,7 +4,7 @@ import styled, { DefaultTheme, css } from 'styled-components';
 
 import { BadgeProps } from '.';
 
-type WrapperProps = Pick<BadgeProps, 'size'>;
+type WrapperProps = Pick<BadgeProps, 'size' | 'color'>;
 
 const wrapperModifiers = {
 	small: () => css`
@@ -24,14 +24,21 @@ const wrapperModifiers = {
       font-size: ${theme.fonts.sizes.sm};
     }
   `,
+
+	red: (theme: DefaultTheme) => css`
+    background-color: ${theme.colors.support.red};
+  `,
+
+	green: (theme: DefaultTheme) => css`
+    background-color: ${theme.colors.support.green[400]};
+  `,
 };
 
 export const Wrapper = styled.div<WrapperProps>`
-  ${({ theme, size }) => css`
+  ${({ theme, size, color }) => css`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: ${theme.colors.support.red};
     border-radius: 4px;
     z-index: ${theme.layers.base};
 
@@ -42,5 +49,6 @@ export const Wrapper = styled.div<WrapperProps>`
     }
 
     ${!!size && wrapperModifiers[size](theme)};
+    ${!!color && wrapperModifiers[color](theme)};
   `}
 `;
