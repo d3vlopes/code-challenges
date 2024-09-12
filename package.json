@@ -11,6 +11,7 @@
 		"start": "next start",
 		"test": "npx vitest run --silent",
 		"test:ci": "npx vitest run --coverage",
+		"test:staged": "yarn test related ./src/presentation/components/**/*.test.tsx",
 		"test:verbose": "npx vitest",
 		"test:unit": "npx vitest --watch --silent",
 		"storybook": "storybook dev -p 6006",
