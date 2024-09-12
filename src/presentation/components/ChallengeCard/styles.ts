@@ -12,6 +12,11 @@ export const Wrapper = styled(motion.div)`
   ${({ theme }) => css`
     border-radius: 0 0 4px 4px;
     background-color: ${theme.colors.background['200']};
+    min-height: 39.5rem; 
+
+    ${media.md`
+      min-height: 41.3rem; 
+    `}
 
     ${ButtonStyles} {
       padding: 0 0.8rem 2.4rem;
