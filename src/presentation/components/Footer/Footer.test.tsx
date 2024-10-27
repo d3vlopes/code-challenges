@@ -57,13 +57,13 @@ describe('<Footer />', () => {
 	it('should render Badge for not released tracks', () => {
 		render(<Footer {...mock} />);
 
-		const Badge = screen.getAllByTestId('mock-badge');
+		const notReleasedBadges = screen.getAllByText('Em breve');
 
 		const inactiveTracks = mock.navigationLinks.tracksNavigation.tracks.filter(
 			(track) => track.isReleased === false,
 		);
 
-		expect(Badge).toHaveLength(inactiveTracks.length);
+		expect(notReleasedBadges).toHaveLength(inactiveTracks.length);
 	});
 
 	it('should render help navigation heading', () => {
