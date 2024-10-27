@@ -33,6 +33,7 @@ export const TracksTab = ({ tracks }: TracksTabProps) => {
 					return (
 						<S.TabButtonWrapper key={track.id}>
 							{!track.isReleased ? <Badge>Em breve</Badge> : null}
+							{track.isNews ? <Badge color="green">Novo</Badge> : null}
 
 							<S.TabButton
 								type="button"
