@@ -42,4 +42,12 @@ describe('<Select />', () => {
 
 		expect(label).toBeInTheDocument();
 	});
+
+	it('should not render label if not value is provided', () => {
+		render(<Select name={mock.name} options={mock.options} />);
+
+		const label = screen.queryByLabelText('Trilha');
+
+		expect(label).not.toBeInTheDocument();
+	});
 });

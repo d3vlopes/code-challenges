@@ -7,7 +7,6 @@ import { Select } from '.';
 const meta: Meta<typeof Select> = {
 	title: 'Select',
 	component: Select,
-	args: selectMock,
 };
 
 export default meta;
@@ -23,4 +22,17 @@ const template: Story = {
 
 export const Default: Story = {
 	...template,
+	args: {
+		name: selectMock.name,
+		label: selectMock.label,
+		options: selectMock.options,
+	},
+};
+
+export const NotLabel: Story = {
+	...template,
+	args: {
+		name: selectMock.name,
+		options: selectMock.options,
+	},
 };
