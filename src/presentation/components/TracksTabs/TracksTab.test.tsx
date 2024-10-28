@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { vitest } from 'vitest';
 
 import { render, screen } from '@/__tests__/helpers';
@@ -6,7 +7,6 @@ import { generateID } from '@/utils/generate-id';
 
 import { challengeMock } from '../ChallengeCard/mock';
 
-import { ReactNode } from 'react';
 import { TracksTab, TracksTabProps } from '.';
 
 const mock: TracksTabProps = {
@@ -14,6 +14,7 @@ const mock: TracksTabProps = {
 		{
 			id: generateID(),
 			isReleased: true,
+			isNews: false,
 			name: 'Frontend Developer',
 			challenges: [
 				{
@@ -24,8 +25,15 @@ const mock: TracksTabProps = {
 		},
 		{
 			id: generateID(),
-			isReleased: false,
+			isReleased: true,
+			isNews: true,
 			name: 'Backend Developer',
+		},
+		{
+			id: generateID(),
+			isReleased: false,
+			isNews: false,
+			name: 'Mobile Developer',
 		},
 	],
 };
@@ -56,20 +64,28 @@ describe('<TracksTab />', () => {
 	it('should render Badge for not released tracks', () => {
 		render(<TracksTab {...mock} />);
 
-		const Badge = screen.getAllByTestId('mock-badge');
+		const notReleasedBadges = screen.getAllByText('Em breve');
 
 		const inactiveTracks = mock.tracks.filter(
 			(track) => track.isReleased === false,
 		);
 
-		expect(Badge).toHaveLength(inactiveTracks.length);
+		expect(notReleasedBadges).toHaveLength(inactiveTracks.length);
+	});
+
+	it('should render Badge with text "Novo" for news released tracks', () => {
+		render(<TracksTab {...mock} />);
+
+		const newBadgeText = screen.getByText('Novo');
+
+		expect(newBadgeText).toBeInTheDocument();
 	});
 
 	it('should disabled button for not released track', () => {
 		const { container } = render(<TracksTab {...mock} />);
 
 		const notReleasedTrackButton = container.querySelector(
-			'#tab-backend-developer',
+			'#tab-mobile-developer',
 		);
 
 		expect(notReleasedTrackButton).toBeDisabled();
@@ -79,7 +95,7 @@ describe('<TracksTab />', () => {
 		const { container } = render(<TracksTab {...mock} />);
 
 		const activeTab = container.querySelector('#panel-frontend-developer');
-		const inactiveTab = container.querySelector('#panel-backend-developer');
+		const inactiveTab = container.querySelector('#panel-mobile-developer');
 
 		expect(activeTab?.getAttribute('aria-hidden')).toBe('false');
 		expect(inactiveTab?.getAttribute('aria-hidden')).toBe('true');
@@ -89,7 +105,7 @@ describe('<TracksTab />', () => {
 		const { container } = render(<TracksTab {...mock} />);
 
 		const activeTab = container.querySelector('#panel-frontend-developer');
-		const inactiveTab = container.querySelector('#panel-backend-developer');
+		const inactiveTab = container.querySelector('#panel-mobile-developer');
 
 		expect(activeTab).toHaveStyle({
 			display: 'flex',

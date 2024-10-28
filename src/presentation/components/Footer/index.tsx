@@ -36,6 +36,12 @@ export const Footer = ({
 									{!track.isReleased ? (
 										<Badge size="small">Em breve</Badge>
 									) : null}
+
+									{track.isNews ? (
+										<Badge size="small" color="green">
+											Novo
+										</Badge>
+									) : null}
 								</S.Track>
 							);
 						})}

@@ -14,7 +14,7 @@ export interface OptionsProps {
 
 export interface SelectProps extends SelectBaseProps {
 	name: string;
-	label: string;
+	label?: string;
 	options: OptionsProps[];
 }
 
@@ -24,7 +24,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
 
 		return (
 			<S.Wrapper>
-				<S.Label htmlFor={id}>{label}</S.Label>
+				{!!label && <S.Label htmlFor={id}>{label}</S.Label>}
 
 				<S.Select id={id} name={name} {...props} ref={ref}>
 					{options.map((option) => {

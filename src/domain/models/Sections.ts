@@ -37,10 +37,8 @@ export interface CheckoutSectionModel extends SectionModel {
 	features: FeatureModel[];
 	originalPrice: string;
 	salePrice: string;
-	button: {
-		text: string;
-		href: string;
-	};
+	buttonText: string;
+	tracks: Pick<TrackModel, 'name' | 'href'>[];
 	warningText?: string;
 	paymentMethods: PaymentMethodModel[];
 	planHighlight: {

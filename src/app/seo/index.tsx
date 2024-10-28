@@ -34,7 +34,7 @@ export function generateJSONLd(data: MainModel) {
 		description: seoConfig.description,
 		offers: {
 			'@type': 'Offer',
-			url: data.checkout.button.href,
+			url: 'https://pay.hotmart.com/C92887324Y?checkoutMode=10',
 			priceCurrency: 'BRL',
 			price: data.checkout.salePrice,
 			availability: 'https://schema.org/InStock',

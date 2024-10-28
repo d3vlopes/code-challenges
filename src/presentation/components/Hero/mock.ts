@@ -14,23 +14,23 @@ export const heroMock: HeroProps = {
 	technologiesIcons: [
 		{
 			id: generateID(),
-			src: 'https://sa-east-1.graphassets.com/clvfs1ld70bcs07ke07bkdxol/clvn86gft0frd07kgcq0meopa',
-			alt: 'React',
+			src: 'https://sa-east-1.graphassets.com/clvfs1ld70bcs07ke07bkdxol/cm23wk87f0k6a07keuiiepp40',
+			alt: 'Logo do Node.js',
 		},
 		{
 			id: generateID(),
-			src: 'https://sa-east-1.graphassets.com/clvfs1ld70bcs07ke07bkdxol/clvn86gge0frh07kgclgkzet2',
-			alt: 'Figma',
+			src: 'https://sa-east-1.graphassets.com/clvfs1ld70bcs07ke07bkdxol/cm23wix7u0k4e08kk5pp0tdll',
+			alt: 'Logo do Docker',
 		},
 		{
 			id: generateID(),
-			src: 'https://sa-east-1.graphassets.com/clvfs1ld70bcs07ke07bkdxol/clvn86gfx0fl108lzx4z759nq',
-			alt: 'Jest',
+			src: 'https://sa-east-1.graphassets.com/clvfs1ld70bcs07ke07bkdxol/cm23wix6r0k5g07keazwv56ak',
+			alt: 'Logo do NestJS',
 		},
 		{
 			id: generateID(),
-			src: 'https://sa-east-1.graphassets.com/clvfs1ld70bcs07ke07bkdxol/clvn86gf60fkx08lzfw3k84nm',
-			alt: 'Tailwind',
+			src: 'https://sa-east-1.graphassets.com/clvfs1ld70bcs07ke07bkdxol/cm23wix5o0k5b07kecdmqqi5w',
+			alt: 'Logo do PostgreSQL',
 		},
 		{
 			id: generateID(),
@@ -39,8 +39,8 @@ export const heroMock: HeroProps = {
 		},
 		{
 			id: generateID(),
-			src: 'https://sa-east-1.graphassets.com/clvfs1ld70bcs07ke07bkdxol/clvn86gfd0fr907kglv3l6l02',
-			alt: 'Redux',
+			src: 'https://sa-east-1.graphassets.com/clvfs1ld70bcs07ke07bkdxol/cm23wix710jvb0dkdl3zazgzf',
+			alt: 'Logo do Redis',
 		},
 	],
 };

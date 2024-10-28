@@ -40,5 +40,16 @@ export const faqAccordionMock: FaqAccordionProps = {
 			content:
 				'Sim, estamos oferecendo um valor especial para as primeiras pessoas a confiar e apoiar o Code Challenges, depois o valor vai aumentar consideravelmente.',
 		},
+		{
+			id: generateID(),
+			title: 'Vou ter acesso a todas as trilhas?',
+			content:
+				'Não, você vai ter acesso apenas a trilha que você escolheu. Nosso objetivo é que você se torne especialista na trilha que você escolher e ter foco é essencial para alcançar esse objetivo.',
+		},
+		{
+			id: generateID(),
+			title: 'Posso trocar de trilha?',
+			content: 'Sim, você pode trocar de trilha após fazer a assinatura.',
+		},
 	],
 };

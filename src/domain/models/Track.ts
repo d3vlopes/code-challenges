@@ -7,6 +7,7 @@ interface ChallengeType extends ChallengeModel {
 export interface TrackModel {
 	id: string;
 	name: string;
+	isNews?: boolean;
 	isReleased: boolean;
 	challenges?: ChallengeType[];
 	href?: string;

@@ -226,3 +226,12 @@ export const PlanHighlight = styled.div`
     }
   `}
 `;
+
+export const ModalContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  height: 60rem;
+`;
