@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
 
 import { CheckoutSectionModel } from '@/domain/models/Sections';
 
@@ -15,13 +14,10 @@ import { PaymentMethods } from '@/presentation/components/PaymentMethods';
 
 import { makeAnimation } from './animations';
 
-import { ModalCheckout, ModalCheckoutProps } from './components/Modal';
-
 import * as S from './styles';
 
 export const CheckoutSection = (props: CheckoutSectionModel) => {
 	const { ref, inView } = useAnimation();
-	const [isOpenModal, setIsOpenModal] = useState(false);
 
 	const animationVariants = {
 		hidden: { opacity: 0, x: 10 },
@@ -30,19 +26,6 @@ export const CheckoutSection = (props: CheckoutSectionModel) => {
 
 	const badgeAnimation = makeAnimation.moveAnimation(20);
 	const headingAnimation = makeAnimation.moveAnimation(40);
-
-	function handleToggleModal() {
-		setIsOpenModal((prevState) => !prevState);
-	}
-
-	const modalProps: ModalCheckoutProps = {
-		modal: {
-			isOpen: isOpenModal,
-			onRequestClose: handleToggleModal,
-		},
-		buttonText: props.buttonText,
-		tracks: props.tracks,
-	};
 
 	return (
 		<>
@@ -98,7 +81,13 @@ export const CheckoutSection = (props: CheckoutSectionModel) => {
 				</S.PriceWrapper>
 
 				<S.ButtonWrapper>
-					<Button onClick={handleToggleModal}>{props.buttonText}</Button>
+					<Button>
+						{
+							<a href={props.buttonURL} target="_blank" rel="noreferrer">
+								{props.buttonText}
+							</a>
+						}
+					</Button>
 
 					{!!props.warningText && (
 						<motion.span>{props.warningText}</motion.span>
@@ -116,8 +105,6 @@ export const CheckoutSection = (props: CheckoutSectionModel) => {
 					<p>{props.planHighlight.text}</p>
 				</S.PlanHighlight>
 			</S.Wrapper>
-
-			<ModalCheckout {...modalProps} />
 		</>
 	);
 };

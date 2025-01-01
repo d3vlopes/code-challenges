@@ -83,22 +83,13 @@ export const mainTemplateMock: MainTemplateProps = {
 		originalPrice: formatPrice(129.9),
 		salePrice: formatPrice(49.9),
 		buttonText: 'Assinar agora',
+		buttonURL: 'https://pay.hotmart.com/C92887324Y',
 		warningText: 'Garantia de 7 dias para experimentar',
 		paymentMethods: paymentMethodsMock.items,
 		planHighlight: {
 			heading: 'Cancele quando quiser',
 			text: 'No Code Challenges, você tem liberdade para decidir quando encerrar sua assinatura. Com o nosso plano mensal, você não fica preso por 12 meses, aqui você só continua se realmente sentir que está evoluindo e atingindo seus objetivos como desenvolvedor.',
 		},
-		tracks: [
-			{
-				name: 'Frontend Developer',
-				href: 'https://pay.hotmart.com/C92887324Y?off=v1ar8u9r&checkoutMode=10',
-			},
-			{
-				name: 'Backend Developer',
-				href: 'https://pay.hotmart.com/C92887324Y?off=h1qi4bal&checkoutMode=10',
-			},
-		],
 	},
 	newsletter: {
 		titleHTML:
