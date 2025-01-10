@@ -10,7 +10,7 @@ export const highlightsMock: HighlightsProps = {
 				src: 'https://sa-east-1.graphassets.com/clvfs1ld70bcs07ke07bkdxol/clw86qn1w07z108kjtro979ci',
 				alt: 'Uma ilustração de uma pessoa subindo uma escada rumo a ganhar experiência',
 			},
-			title: 'Ganhe experiência',
+			title: 'Experiência real',
 			description:
 				'Você emulará o fluxo de trabalho de um desenvolvedor em uma empresa, resolvendo problemas complexos e do mundo real, ganhando a experiência necessária  para entrar no mercado preparado para os desafios do dia a dia de um desenvolvedor de software.',
 		},
@@ -40,7 +40,7 @@ export const highlightsMock: HighlightsProps = {
 				src: 'https://sa-east-1.graphassets.com/clvfs1ld70bcs07ke07bkdxol/clw86qn15085e07lv1tu3357o',
 				alt: 'Uma ilustração de uma pessoa ajudando a outra',
 			},
-			title: 'Mentoria',
+			title: 'Orientação',
 			description:
 				'Tenha seu desafio revisado por um desenvolvedor experiente e receba feedbacks que vão te fazer evoluir muito mais rápido e com qualidade na direção certa, fazendo você não desperdiçar tempo, dinheiro e esforço.',
 		},
