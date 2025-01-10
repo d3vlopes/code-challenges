@@ -44,7 +44,7 @@ export const mainTemplateMock: MainTemplateProps = {
 	},
 	checkout: {
 		id: 'checkout',
-		badgeText: 'Promoção especial de lançamento ',
+		badgeText: 'Promoção especial',
 		heading: 'Assine hoje e garanta acesso a tudo isso!',
 		features: [
 			{
