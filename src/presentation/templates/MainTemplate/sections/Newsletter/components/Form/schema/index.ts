@@ -6,8 +6,8 @@ export const newsletterFormSchema = z.object({
 	track: z.enum([
 		'frontend-developer',
 		'backend-developer',
-		'full-stack-developer',
 		'mobile-developer',
+		'web-designer',
 	]),
 });
 

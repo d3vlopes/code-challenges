@@ -397,7 +397,7 @@ export const tracksMock: TracksTabProps = {
 		{
 			id: generateID(),
 			isReleased: false,
-			name: 'Full Stack Developer',
+			name: 'Web Designer',
 		},
 	],
 };
