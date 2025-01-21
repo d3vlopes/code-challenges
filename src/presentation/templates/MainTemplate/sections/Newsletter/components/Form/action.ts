@@ -22,8 +22,8 @@ export async function addOnNewsletter(
 	const trackMap = {
 		'frontend-developer': 'Frontend Developer',
 		'backend-developer': 'Backend Developer',
-		'full-stack-developer': 'Full Stack Developer',
 		'mobile-developer': 'Mobile Developer',
+		'web-designer': 'Web Designer',
 	};
 
 	const variables: AddNewsletterMutationVariables = {
