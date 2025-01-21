@@ -97,6 +97,7 @@ export const mainTemplateMock: MainTemplateProps = {
 		description:
 			'Assine nossa newsletter e fique sabendo quando for disponibilizado novas trilhas, promoções e muito mais!',
 		buttonText: 'Assinar',
+		tracks: tracksMock.tracks,
 	},
 	faq: {
 		id: 'duvidas',

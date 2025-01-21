@@ -10,6 +10,7 @@ export const NewsletterSection = ({
 	titleHTML,
 	description,
 	buttonText,
+	tracks,
 }: NewsletterSectionModel) => {
 	const clearTitle = sanitizeHTMLFacade(titleHTML);
 
@@ -19,7 +20,7 @@ export const NewsletterSection = ({
 
 			<S.Description>{description}</S.Description>
 
-			<Form buttonText={buttonText} />
+			<Form buttonText={buttonText} tracks={tracks} />
 		</S.Wrapper>
 	);
 };

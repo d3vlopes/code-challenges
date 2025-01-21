@@ -11,9 +11,7 @@ import { useForm, zodResolver } from '@/infra/libs/forms/react-hook-form';
 
 import { Button } from '@/presentation/components/Button';
 import { Input } from '@/presentation/components/Input';
-import { Select } from '@/presentation/components/Select';
-
-import { options } from './options';
+import { OptionsProps, Select } from '@/presentation/components/Select';
 
 import { NewsletterFormModel, newsletterFormSchema } from './schema';
 
@@ -21,9 +19,9 @@ import { addOnNewsletter } from './action';
 
 import * as S from '../../styles';
 
-type FormProps = Pick<NewsletterSectionModel, 'buttonText'>;
+type FormProps = Pick<NewsletterSectionModel, 'buttonText' | 'tracks'>;
 
-export const Form = ({ buttonText }: FormProps) => {
+export const Form = ({ buttonText, tracks }: FormProps) => {
 	const {
 		register,
 		handleSubmit,
@@ -69,6 +67,12 @@ export const Form = ({ buttonText }: FormProps) => {
 			setIsLoading(false);
 		}
 	}
+
+	const options: OptionsProps[] = tracks.map((track) => ({
+		id: track.id,
+		text: track.name,
+		value: track.name.replaceAll(' ', '-').toLowerCase(),
+	}));
 
 	return (
 		<S.FormWrapper>

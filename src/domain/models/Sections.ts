@@ -51,6 +51,7 @@ export interface NewsletterSectionModel extends SectionModel {
 	titleHTML: string;
 	description: string;
 	buttonText: string;
+	tracks: TrackModel[];
 }
 
 export interface FaqSectionModel extends SectionModel {
