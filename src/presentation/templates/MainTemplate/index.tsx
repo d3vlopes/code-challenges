@@ -4,6 +4,7 @@ import { Footer } from '@/presentation/components/Footer';
 import { Header } from '@/presentation/components/Header';
 import { Hero } from '@/presentation/components/Hero';
 
+import { AboutSection } from './sections/About';
 import { BenefitsSection } from './sections/Benefits';
 import { CheckoutSection } from './sections/Checkout';
 import { FaqSection } from './sections/Faq';
@@ -21,6 +22,8 @@ export const MainTemplate = (props: MainTemplateProps) => {
 		<>
 			<Header {...props.header} />
 			<Hero {...props.hero} />
+
+			<AboutSection {...props.about} />
 
 			<S.Container>
 				<HighlightsSection {...props.highlights} />

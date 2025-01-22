@@ -16,6 +16,12 @@ import { MainTemplateProps } from '.';
 export const mainTemplateMock: MainTemplateProps = {
 	header: headerMock,
 	hero: heroMock,
+	about: {
+		logo: headerMock.logo,
+		text: `<p>
+			O Code Challenges é uma formação prática para desenvolvedores que desejam se preparar para os desafios do mercado de trabalho. Aqui, você não apenas assiste vídeos ou replica códigos, mas aprende de forma ativa, resolvendo problemas reais e criando suas próprias soluções.</p> <p>As formações são organizadas em trilhas de aprendizado, cada uma composta por 3 desafios práticos e 3 projetos legados. Nos projetos legados, você terá a oportunidade de trabalhar com códigos já existentes, enfrentando tarefas como corrigir bugs e implementar novas funcionalidades. Isso proporciona um aprendizado mais profundo e realista, simulando o que acontece no dia a dia de uma empresa de desenvolvimento.</p>
+		`,
+	},
 	highlights: {
 		content: highlightsMock.items,
 	},

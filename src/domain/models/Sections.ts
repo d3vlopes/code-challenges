@@ -2,12 +2,18 @@ import {
 	BenefitModel,
 	FeatureModel,
 	HighlightModel,
+	ImageModel,
 	PaymentMethodModel,
 	QuestionModel,
 	SectionModel,
 	StepModel,
 	TrackModel,
 } from './_barrel';
+
+export interface AboutSectionModel extends SectionModel {
+	logo: ImageModel;
+	text: string;
+}
 
 export interface HighlightsSectionModel extends SectionModel {
 	content: HighlightModel[];
