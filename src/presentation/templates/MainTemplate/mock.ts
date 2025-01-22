@@ -23,6 +23,7 @@ export const mainTemplateMock: MainTemplateProps = {
 		`,
 	},
 	highlights: {
+		heading: 'Descubra uma nova forma de aprender',
 		content: highlightsMock.items,
 	},
 	tracks: {
