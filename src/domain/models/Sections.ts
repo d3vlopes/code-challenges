@@ -7,6 +7,7 @@ import {
 	QuestionModel,
 	SectionModel,
 	StepModel,
+	TestimonialModel,
 	TrackModel,
 } from './_barrel';
 
@@ -36,6 +37,10 @@ export interface HowItWorkSectionModel extends SectionModel {
 
 export interface BenefitsSectionModel extends SectionModel {
 	content: BenefitModel[];
+}
+
+export interface TestimonialsSectionModel extends SectionModel {
+	testimonials: TestimonialModel[];
 }
 
 export interface CheckoutSectionModel extends SectionModel {
