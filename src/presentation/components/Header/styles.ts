@@ -35,7 +35,7 @@ export const Container = styled(ContainerBase)`
 
   ${media.md`
     margin: 0 auto;
-    gap: 8rem;
+    gap: 4rem;
     flex-wrap: initial;
     margin-right: auto;
     margin-left: auto;
@@ -66,11 +66,15 @@ export const Nav = styled.nav<MenuProps>`
 
       a {
         font-family: ${theme.fonts.family.heading};
-        font-size: ${theme.fonts.sizes['2xl']};
+        font-size: ${theme.fonts.sizes.lg};
         font-weight: 500;
         color: ${theme.colors.text.white};
         text-rendering: optimizeLegibility;
         transition: all 0.35s ease-in-out;
+
+        ${media.lg`
+          font-size: ${theme.fonts.sizes['2xl']};
+        `}
 
         &:hover,
         .active {
