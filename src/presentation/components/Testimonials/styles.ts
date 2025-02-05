@@ -58,7 +58,7 @@ export const ItemContent = styled.div`
     h3 {
       font-family: ${theme.fonts.family.heading};
       font-size: ${theme.fonts.sizes['4xl']};
-      color: ${theme.colors.text.white};
+      color: ${theme.colors.grey['100']};
 
       ${media.md`
         font-size: ${theme.fonts.sizes['6xl']};
