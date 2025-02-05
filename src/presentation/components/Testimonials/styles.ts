@@ -2,6 +2,8 @@
 
 import styled, { css } from 'styled-components';
 
+import { motion } from '@/infra/libs/animations/framer-motion';
+
 import { Wrapper as SocialIconsStyles } from '@/presentation/components/SocialIcons/styles';
 
 import { media } from '@/presentation/styles/helpers/media';
@@ -12,7 +14,7 @@ export const Wrapper = styled.div`
   gap: 3.2rem;
 `;
 
-export const ItemWrapper = styled.div`
+export const ItemWrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
