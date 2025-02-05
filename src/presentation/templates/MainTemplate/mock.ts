@@ -6,6 +6,7 @@ import { heroMock } from '@/presentation/components/Hero/mock';
 import { highlightsMock } from '@/presentation/components/Highlights/mock';
 import { paymentMethodsMock } from '@/presentation/components/PaymentMethods/mock';
 import { stepsMock } from '@/presentation/components/Steps/mock';
+import { testimonialsMock } from '@/presentation/components/Testimonials/mock';
 import { tracksMock } from '@/presentation/components/TracksTabs/mock';
 
 import { formatPrice } from '@/utils/format-price';
@@ -48,6 +49,11 @@ export const mainTemplateMock: MainTemplateProps = {
 		id: 'beneficios',
 		heading: 'Benefícios',
 		content: benefitsCardMock.items,
+	},
+	testimonials: {
+		id: 'depoimentos',
+		heading: 'Veja o que nossos alunos falam',
+		testimonials: testimonialsMock.items,
 	},
 	checkout: {
 		id: 'checkout',

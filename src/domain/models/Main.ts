@@ -8,6 +8,7 @@ import {
 	HighlightsSectionModel,
 	HowItWorkSectionModel,
 	NewsletterSectionModel,
+	TestimonialsSectionModel,
 	TracksSectionModel,
 } from './Sections';
 
@@ -19,6 +20,7 @@ export interface MainModel {
 	tracks: TracksSectionModel;
 	howItWorks: HowItWorkSectionModel;
 	benefits: BenefitsSectionModel;
+	testimonials: TestimonialsSectionModel;
 	checkout: CheckoutSectionModel;
 	newsletter: NewsletterSectionModel;
 	faq: FaqSectionModel;

@@ -11,6 +11,7 @@ import { FaqSection } from './sections/Faq';
 import { HighlightsSection } from './sections/Highlights';
 import { HowItWorksSection } from './sections/HowItWorks';
 import { NewsletterSection } from './sections/Newsletter';
+import { TestimonialsSection } from './sections/Testimonials';
 import { TracksSection } from './sections/Tracks';
 
 import * as S from './styles';
@@ -34,6 +35,7 @@ export const MainTemplate = (props: MainTemplateProps) => {
 			<S.Container>
 				<HowItWorksSection {...props.howItWorks} />
 				<BenefitsSection {...props.benefits} />
+				<TestimonialsSection {...props.testimonials} />
 			</S.Container>
 
 			<CheckoutSection {...props.checkout} />
