@@ -10,6 +10,7 @@ import { CheckoutSection } from './sections/Checkout';
 import { FaqSection } from './sections/Faq';
 import { HighlightsSection } from './sections/Highlights';
 import { HowItWorksSection } from './sections/HowItWorks';
+import { MentorSection } from './sections/Mentor';
 import { NewsletterSection } from './sections/Newsletter';
 import { TestimonialsSection } from './sections/Testimonials';
 import { TracksSection } from './sections/Tracks';
@@ -36,6 +37,7 @@ export const MainTemplate = (props: MainTemplateProps) => {
 				<HowItWorksSection {...props.howItWorks} />
 				<BenefitsSection {...props.benefits} />
 				<TestimonialsSection {...props.testimonials} />
+				<MentorSection heading="Conheça quem vai te acompanhar nessa jornada" />
 			</S.Container>
 
 			<CheckoutSection {...props.checkout} />
