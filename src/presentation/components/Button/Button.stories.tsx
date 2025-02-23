@@ -7,6 +7,7 @@ const meta: Meta<typeof Button> = {
 	component: Button,
 	args: {
 		children: 'Explorar trilhas',
+		variant: 'fill',
 	},
 };
 
@@ -44,5 +45,12 @@ export const AsAnchor: Story = {
 	),
 	args: {
 		asChild: true,
+	},
+};
+
+export const Outline: Story = {
+	...template,
+	args: {
+		variant: 'outline',
 	},
 };
