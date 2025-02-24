@@ -97,14 +97,12 @@ ${({ theme }) => css`
     min-width: 36rem;
     max-width: 104.2rem;
     min-height: 50rem;
-    background: ${theme.colors.background['300']};
     border-radius: 4px;
-    margin: 1.6rem;
+    margin: 0 1.6rem;
     max-height: calc(100vh - 2rem);
-    overflow-y: auto;
+    overflow-y: hidden;
 
     ${media.md`
-      margin: 0;
       height: 70rem;
     `}
   }
@@ -114,8 +112,10 @@ ${({ theme }) => css`
     right: 12px;
     top: 17px;
     border: 0;
-    background: transparent;
+    background: ${theme.colors.background[200]};
+    border-radius: 100%;
     transition: filter 0.2s;
+    margin: 0 auto;
 
     ${media.md`
       right: 40px;
