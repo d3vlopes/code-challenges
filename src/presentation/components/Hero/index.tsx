@@ -1,10 +1,11 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import { HeroModel } from '@/domain/models/Hero';
 
 import { Button } from '@/presentation/components/Button';
+import { Modal } from '@/presentation/components/Modal';
 
 import { animate, stagger } from '@/infra/libs/animations/framer-motion';
 import { sanitizeHTMLFacade } from '@/infra/libs/sanitizers/sanitize-html';
@@ -16,10 +17,17 @@ export type HeroProps = HeroModel;
 export const Hero = ({
 	titleHTML,
 	description,
-	button,
+	buttons,
+	iframe,
 	technologiesIcons,
 }: HeroProps) => {
+	const [isOpenModal, setIsOpenModal] = useState(false);
+
 	const clearTitleHTML = sanitizeHTMLFacade(titleHTML);
+
+	function handleToggleModal() {
+		setIsOpenModal((prevState) => !prevState);
+	}
 
 	useEffect(() => {
 		const icons = document.querySelectorAll('#tech-icon');
@@ -54,9 +62,17 @@ export const Hero = ({
 
 			<S.Description>{description}</S.Description>
 
-			<Button asChild>
-				<a href={button.href}>{button.text}</a>
-			</Button>
+			<S.ButtonsWrapper>
+				<Button asChild>
+					<a href={buttons.checkoutButton.href}>
+						{buttons.checkoutButton.text}
+					</a>
+				</Button>
+
+				<Button variant="outline" onClick={handleToggleModal}>
+					{buttons.videoButton.text}
+				</Button>
+			</S.ButtonsWrapper>
 
 			<S.TechnologiesBottomIcon>
 				{technologiesIcons.slice(3, 6).map((item) => {
@@ -67,6 +83,19 @@ export const Hero = ({
 					);
 				})}
 			</S.TechnologiesBottomIcon>
+
+			<Modal isOpen={isOpenModal} onRequestClose={handleToggleModal}>
+				<S.ModalContent>
+					<iframe
+						src={iframe.src}
+						title={iframe.title}
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerPolicy="strict-origin-when-cross-origin"
+						allowFullScreen
+						loading="lazy"
+					/>
+				</S.ModalContent>
+			</Modal>
 		</S.Wrapper>
 	);
 };

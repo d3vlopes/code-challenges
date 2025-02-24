@@ -20,10 +20,6 @@ export const Wrapper = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
 
-  ${ButtonStyles} > a {
-    margin: 1.6rem 0 3.7rem;
-  }
-
   ${media.sm`
     padding-left: 1.6rem;
     padding-right: 1.6rem;
@@ -33,12 +29,6 @@ export const Wrapper = styled.div`
     background-image: url(${backgroundDesktop});
     height: 57.9rem;
     padding: 8.1rem 0 1.8rem;
-
-    ${ButtonStyles} > a {
-      width: 23.8rem;
-      height: 5.9rem;
-      margin-top: 2.4rem;
-    }
   `}
 
   ${media.xl`
@@ -133,11 +123,57 @@ export const Description = styled.p`
   `}
 `;
 
+export const ButtonsWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.8rem;
+  margin: 1.6rem 0 3.7rem;
+
+  ${ButtonStyles} > button {
+    width: 15.8rem;
+  }
+
+  ${ButtonStyles} > a {
+    width: 16.5rem;
+  }
+
+  ${media.md`
+    margin-top: 2.4rem;
+    gap: 1.2rem;
+
+    ${ButtonStyles} > a {
+      width: 19.2rem;
+      height: 5.9rem;
+    }
+
+    ${ButtonStyles} > button {
+      width: 19.2rem;
+      height: 5.9rem;
+    }
+  `}
+`;
+
 export const TechnologiesBottomIcon = styled(TechnologiesWrapper)`
   ${TechnologiesIconWrapper} {
     &:nth-child(2) {
       position: relative;
       top: 22px;
     }
+  }
+`;
+
+export const ModalContent = styled.div`
+  margin: 10rem auto;
+
+  iframe {
+    width: 100%;
+    min-height: 31.5rem;
+    border: none;
+
+    ${media.md`
+      width: 99rem;
+      height: 51.5rem;
+    `}
   }
 `;
