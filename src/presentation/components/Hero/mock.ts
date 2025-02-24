@@ -7,9 +7,18 @@ export const heroMock: HeroProps = {
 		'<h1>Ganhe experiência como desenvolvedor criando <strong>projetos do mundo real</strong></h1>',
 	description:
 		'Com as trilhas do Code Challenges, você ganha a experiência necessária para entrar no mercado preparado para os desafios que vai encontrar.',
-	button: {
-		text: 'Explorar trilhas',
-		href: '#trilhas',
+	buttons: {
+		checkoutButton: {
+			text: 'Começar agora',
+			href: 'https://pay.hotmart.com/C92887324Y',
+		},
+		videoButton: {
+			text: 'Demonstração',
+		},
+	},
+	iframe: {
+		title: 'Demonstração do Code Challenges',
+		src: 'https://www.youtube.com/embed/9SOmj7Y-mLU?si=4ksapLl8hS1W0akP',
 	},
 	technologiesIcons: [
 		{

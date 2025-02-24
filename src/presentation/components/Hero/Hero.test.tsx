@@ -1,20 +1,17 @@
-import { ReactNode } from 'react';
-import { vitest } from 'vitest';
-
-import { render, screen } from '@/__tests__/helpers';
+import { act, render, screen, userEvent } from '@/__tests__/helpers';
 
 import { heroMock as mock } from './mock';
 
 import { Hero } from '.';
 
-vitest.mock('@/presentation/components/Button', () => ({
-	Button: ({ children }: { children: ReactNode }) => (
-		<div data-testid="mock-button">{children}</div>
-	),
-}));
-
 describe('<Hero />', () => {
-	beforeEach(() => render(<Hero {...mock} />));
+	beforeEach(() => {
+		document.body.innerHTML = `
+		<div id="modal-root" />
+		`;
+
+		render(<Hero {...mock} />);
+	});
 
 	it('should render title', () => {
 		const title = screen.getByRole('heading');
@@ -28,11 +25,17 @@ describe('<Hero />', () => {
 		expect(description).toBeInTheDocument();
 	});
 
-	it('should render Button as anchor', () => {
+	it('should render checkout button as anchor', () => {
 		const anchor = screen.getByRole('link');
 
-		expect(anchor).toHaveAttribute('href', mock.button.href);
-		expect(anchor).toHaveTextContent(mock.button.text);
+		expect(anchor).toHaveAttribute('href', mock.buttons.checkoutButton.href);
+		expect(anchor).toHaveTextContent(mock.buttons.checkoutButton.text);
+	});
+
+	it('should render demo button', () => {
+		const demoButton = screen.getByRole('button');
+
+		expect(demoButton).toHaveTextContent(mock.buttons.videoButton.text);
 	});
 
 	it('should render technologies icons', () => {

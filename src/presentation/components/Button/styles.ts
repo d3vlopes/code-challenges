@@ -27,7 +27,6 @@ ${({ theme, variant }) => css`
     font-weight: 700;
     color: ${theme.colors.text.white};
     min-height: 5.3rem;
-    min-width: 24.2rem;
     border-radius: 8px;
     letter-spacing: 0.05px;
     transition: all ${theme.transitions.default};
