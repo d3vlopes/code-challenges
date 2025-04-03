@@ -83,7 +83,7 @@ export const CheckoutSection = (props: CheckoutSectionModel) => {
 				<S.ButtonWrapper>
 					<Button>
 						{
-							<a href={props.buttonURL} target="_blank" rel="noreferrer">
+							<a href={props.buttonURL} rel="noreferrer">
 								{props.buttonText}
 							</a>
 						}
