@@ -14,9 +14,21 @@ import { generateID } from '@/utils/generate-id';
 
 import { MainTemplateProps } from '.';
 
+const CHECKOUT_URL =
+	'https://pay.hotmart.com/C92887324Y?bid=1743648190391&offDiscount=BEMVINDO';
+
 export const mainTemplateMock: MainTemplateProps = {
 	header: headerMock,
-	hero: heroMock,
+	hero: {
+		...heroMock,
+		buttons: {
+			...heroMock.buttons,
+			checkoutButton: {
+				text: heroMock.buttons.checkoutButton.text,
+				href: CHECKOUT_URL,
+			},
+		},
+	},
 	about: {
 		logo: headerMock.logo,
 		text: `<p>
@@ -33,7 +45,7 @@ export const mainTemplateMock: MainTemplateProps = {
 		content: tracksMock.tracks,
 		cta: {
 			textHTML:
-				'<p>Assine hoje por menos de <strong>R$1,80</strong> por dia</p>',
+				'<p>Assine hoje por menos de <strong>R$2,50</strong> por dia</p>',
 			button: {
 				text: 'Quero assinar agora',
 				href: '#checkout',
@@ -93,10 +105,10 @@ export const mainTemplateMock: MainTemplateProps = {
 				text: 'E muito mais!',
 			},
 		],
-		originalPrice: formatPrice(129.9),
-		salePrice: formatPrice(49.9),
+		originalPrice: formatPrice(181.99),
+		salePrice: formatPrice(69.9),
 		buttonText: 'Assinar agora',
-		buttonURL: 'https://pay.hotmart.com/C92887324Y',
+		buttonURL: CHECKOUT_URL,
 		warningText: 'Garantia de 7 dias para experimentar',
 		paymentMethods: paymentMethodsMock.items,
 		planHighlight: {
